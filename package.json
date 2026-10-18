@@ -1,0 +1,16 @@
+{
+  "name": "ahrefs-traffic-checker-clone",
+  "version": "1.0.0",
+  "description": "Fully functional Ahrefs Traffic Checker recreation with reverse-engineered API integration and live web intelligence",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node tests/test_server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  }
+}
