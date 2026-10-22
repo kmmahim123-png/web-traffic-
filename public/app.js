@@ -235,8 +235,13 @@ function renderResults(data, query, mode, source) {
   const resultsWrapper = document.getElementById('results-wrapper');
   resultsWrapper.classList.remove('hidden');
 
+  const domainName = data.domain || query || '';
+  if (domainName) {
+    document.title = `${domainName} Traffic Statistics, Keywords & SEO Report | km.mahim`;
+  }
+
   // Title and subtitle
-  document.getElementById('report-title').textContent = `Organic traffic of ${data.domain || query}`;
+  document.getElementById('report-title').textContent = `Organic traffic of ${domainName}`;
   document.getElementById('report-badge').textContent = mode === 'exact' ? 'Only specified URL' : 'Domain including subdomains';
   
   const sourceLabel = source === 'ahrefs_reverse_engineered_rpc' 

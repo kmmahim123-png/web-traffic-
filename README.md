@@ -1,8 +1,11 @@
-# km.mahim - Website Traffic Checker & SEO Intelligence
+# km.mahim - Free Website Traffic Checker & SEO Intelligence
 
-An advanced, independent, and high-precision Website Traffic Checker and Domain Authority platform created by **km.mahim**.
+[![Live Website](https://img.shields.io/badge/Live%20Website-web--traffic--jet.vercel.app-00D2FF?style=for-the-badge&logo=vercel)](https://web-traffic-jet.vercel.app/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-Designed with custom branding, original UI components, and a multi-tier intelligence engine to avoid all copyright and trademark conflicts.
+> **Live Production URL:** [https://web-traffic-jet.vercel.app](https://web-traffic-jet.vercel.app)
+
+An advanced, independent, and high-precision Website Traffic Checker and Domain Authority platform created by **km.mahim**. Check monthly organic visits, Domain Rating (DR), top search keywords, and competitor traffic for free without registration.
 
 ---
 
