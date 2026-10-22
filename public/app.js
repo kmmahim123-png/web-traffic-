@@ -16,6 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Set initial engine label
   updateEngineBadge();
 
+  // Render Recent Searches
+  renderRecentSearches();
+
   // Setup Autocomplete
   const inputEl = document.getElementById('target-input');
   const suggestionsBox = document.getElementById('suggestions-box');
@@ -35,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const json = await res.json();
         if (json.suggestions && json.suggestions.length > 0) {
           suggestionsBox.innerHTML = json.suggestions.map(s => `
-            <div class="px-4 py-2 hover:bg-[#22263A] cursor-pointer flex items-center justify-between text-xs" onclick="selectSuggestion('${s}')">
+            <div class="px-4 py-2.5 hover:bg-[#1C2030] cursor-pointer flex items-center justify-between text-xs touch-target" onclick="selectSuggestion('${s}')">
               <span class="font-medium text-white">${s}</span>
               <span class="text-[#64748B]">suggestion</span>
             </div>
@@ -57,9 +60,32 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // Check URL query parameters (e.g. ?domain=coca-cola.com)
+  const urlParams = new URLSearchParams(window.location.search);
+  const paramDomain = urlParams.get('domain') || urlParams.get('url');
+  if (paramDomain) {
+    inputEl.value = paramDomain;
+  }
+
   // Perform initial search
   handleTrafficSubmit(new Event('submit'));
 });
+
+// Mobile Hamburger Toggle
+function toggleMobileMenu() {
+  const menu = document.getElementById('mobile-menu');
+  const icon = document.getElementById('hamburger-icon');
+  const isHidden = menu.classList.contains('hidden');
+
+  if (isHidden) {
+    menu.classList.remove('hidden');
+    if (icon) icon.setAttribute('data-lucide', 'x');
+  } else {
+    menu.classList.add('hidden');
+    if (icon) icon.setAttribute('data-lucide', 'menu');
+  }
+  if (window.lucide) window.lucide.createIcons();
+}
 
 // Format numbers human-friendly (e.g. 11.2M, 340K, $1.5M, or 0)
 function formatCompact(num) {
@@ -68,6 +94,38 @@ function formatCompact(num) {
   if (num >= 1e6) return (num / 1e6).toFixed(1).replace(/\.0$/, '') + 'M';
   if (num >= 1e3) return (num / 1e3).toFixed(1).replace(/\.0$/, '') + 'K';
   return num.toLocaleString();
+}
+
+// Recent Searches Management
+function saveRecentSearch(domain) {
+  try {
+    let recents = JSON.parse(localStorage.getItem('km_recent_searches') || '[]');
+    recents = recents.filter(d => d !== domain);
+    recents.unshift(domain);
+    recents = recents.slice(0, 6);
+    localStorage.setItem('km_recent_searches', JSON.stringify(recents));
+    renderRecentSearches();
+  } catch (e) {}
+}
+
+function renderRecentSearches() {
+  try {
+    const recents = JSON.parse(localStorage.getItem('km_recent_searches') || '[]');
+    const row = document.getElementById('recent-searches-row');
+    const list = document.getElementById('recent-searches-list');
+    if (!recents || recents.length === 0) {
+      if (row) row.classList.add('hidden');
+      return;
+    }
+    if (row && list) {
+      row.classList.remove('hidden');
+      list.innerHTML = recents.map(d => `
+        <button onclick="fillExample('${d}')" class="flex-shrink-0 px-2.5 py-1 rounded-md bg-[#10121A] border border-[#232738] hover:text-[#00D2FF] text-[11px] font-mono text-[#9BA3B8] transition-colors">
+          ${d}
+        </button>
+      `).join('');
+    }
+  } catch (e) {}
 }
 
 // Select an autocomplete suggestion
@@ -85,15 +143,27 @@ function fillExample(domain) {
   handleTrafficSubmit(new Event('submit'));
 }
 
+// Copy shareable report link
+function copyReportLink() {
+  if (!currentData || !currentData.domain) return;
+  const shareUrl = `${window.location.origin}${window.location.pathname}?domain=${encodeURIComponent(currentData.domain)}`;
+  navigator.clipboard.writeText(shareUrl).then(() => {
+    alert(`Link copied to clipboard!\n${shareUrl}`);
+  }).catch(() => {
+    prompt('Copy report link:', shareUrl);
+  });
+}
+
 // Update Active Engine Badge in UI
 function updateEngineBadge() {
   const badge = document.getElementById('active-engine-badge');
+  if (!badge) return;
   if (engineConfig.provider === 'ahrefs_rpc') {
     badge.textContent = 'Engine: Direct Origin RPC';
   } else if (engineConfig.provider === 'ahrefs_api') {
     badge.textContent = 'Engine: Official API v3';
   } else {
-    badge.textContent = 'Engine: km.mahim Index';
+    badge.textContent = 'km.mahim Index';
   }
 }
 
@@ -138,7 +208,12 @@ async function handleTrafficSubmit(e) {
     }
 
     currentData = result.data;
+    saveRecentSearch(currentData.domain || target);
     renderResults(result.data, target, modeSelect.value, result.source);
+
+    // Update URL without reload
+    const newUrl = `${window.location.pathname}?domain=${encodeURIComponent(currentData.domain || target)}`;
+    window.history.replaceState({ path: newUrl }, '', newUrl);
 
     // Smooth scroll to results
     const resultsWrapper = document.getElementById('results-wrapper');
@@ -146,7 +221,7 @@ async function handleTrafficSubmit(e) {
 
   } catch (err) {
     console.error('Fetch error:', err);
-    alert('Failed to connect to km.mahim traffic check engine. Please check your connection.');
+    alert('Failed to connect to traffic check engine. Please check your connection.');
   } finally {
     btnText.textContent = 'Check traffic';
     btnIcon.classList.remove('hidden');
@@ -166,10 +241,10 @@ function renderResults(data, query, mode, source) {
   
   const sourceLabel = source === 'ahrefs_reverse_engineered_rpc' 
     ? 'Direct Origin RPC' 
-    : source === 'ahrefs_official_api' 
+    : source === 'official_api' 
     ? 'Official API' 
     : 'km.mahim Global Index';
-  document.getElementById('report-source-label').textContent = `Source: ${sourceLabel}`;
+  document.getElementById('report-source-label').innerHTML = `<i data-lucide="shield-check" class="w-3.5 h-3.5 text-[#00D2FF]"></i> ${sourceLabel}`;
   document.getElementById('report-timestamp').textContent = `Updated ${new Date().toLocaleDateString()}`;
 
   // Check unranked state
@@ -201,7 +276,7 @@ function renderResults(data, query, mode, source) {
   const countriesTbody = document.getElementById('countries-table-body');
   if (data.topCountries && data.topCountries.length > 0) {
     countriesTbody.innerHTML = data.topCountries.map(c => `
-      <tr class="hover:bg-[#22263A] transition-colors">
+      <tr class="hover:bg-[#1C2030] transition-colors">
         <td class="py-3 flex items-center gap-2.5">
           <img 
             src="https://flagcdn.com/w40/${c.country.code.toLowerCase()}.png" 
@@ -213,7 +288,7 @@ function renderResults(data, query, mode, source) {
         </td>
         <td class="py-3 text-right">
           <div class="flex items-center justify-end gap-2">
-            <div class="w-16 bg-[#141622] h-2 rounded-full overflow-hidden">
+            <div class="w-16 bg-[#10121A] h-2 rounded-full overflow-hidden">
               <div class="bg-[#00D2FF] h-full rounded-full" style="width: ${c.share}%"></div>
             </div>
             <span class="font-bold text-white w-10 text-right">${c.share}%</span>
@@ -225,7 +300,7 @@ function renderResults(data, query, mode, source) {
       </tr>
     `).join('');
   } else {
-    countriesTbody.innerHTML = `<tr><td colspan="3" class="py-6 text-center text-[#64748B]">No organic traffic recorded for this target</td></tr>`;
+    countriesTbody.innerHTML = `<tr><td colspan="3" class="py-6 text-center text-[#64748B]">No organic search traffic recorded for this target</td></tr>`;
   }
 
   // Render Top Keywords Table
@@ -238,8 +313,8 @@ function renderResults(data, query, mode, source) {
       else if (k.position === 3) badgeClass = 'badge-pos-3';
 
       return `
-        <tr class="hover:bg-[#22263A] transition-colors">
-          <td class="py-3 font-medium text-white">
+        <tr class="hover:bg-[#1C2030] transition-colors">
+          <td class="py-3 font-medium text-white break-words">
             ${k.keyword}
           </td>
           <td class="py-3 text-center">
@@ -264,7 +339,7 @@ function renderResults(data, query, mode, source) {
   const pagesTbody = document.getElementById('pages-table-body');
   if (data.topPages && data.topPages.length > 0) {
     pagesTbody.innerHTML = data.topPages.map(p => `
-      <tr class="hover:bg-[#22263A] transition-colors">
+      <tr class="hover:bg-[#1C2030] transition-colors">
         <td class="py-3 pr-4 max-w-xs sm:max-w-md truncate">
           <a href="${p.url}" target="_blank" rel="noopener" class="text-[#00D2FF] hover:text-[#5ce1ff] hover:underline flex items-center gap-1.5 truncate">
             <span class="truncate">${p.url}</span>
@@ -310,7 +385,7 @@ function renderChart(historyData) {
   // Gradient fill for km.mahim cyan theme
   const gradient = ctx.createLinearGradient(0, 0, 0, 300);
   gradient.addColorStop(0, 'rgba(0, 210, 255, 0.40)');
-  gradient.addColorStop(0.7, 'rgba(0, 210, 255, 0.06)');
+  gradient.addColorStop(0.7, 'rgba(0, 210, 255, 0.05)');
   gradient.addColorStop(1, 'rgba(0, 210, 255, 0.0)');
 
   trafficChart = new Chart(ctx, {
@@ -325,7 +400,7 @@ function renderChart(historyData) {
         pointBackgroundColor: '#00D2FF',
         pointBorderColor: '#FFFFFF',
         pointBorderWidth: 1.5,
-        pointRadius: 3.5,
+        pointRadius: 3,
         pointHoverRadius: 6,
         fill: true,
         backgroundColor: gradient,
@@ -342,12 +417,12 @@ function renderChart(historyData) {
       plugins: {
         legend: { display: false },
         tooltip: {
-          backgroundColor: '#181B2A',
+          backgroundColor: '#151824',
           titleColor: '#FFFFFF',
           bodyColor: '#00D2FF',
-          borderColor: '#282D42',
+          borderColor: '#232738',
           borderWidth: 1,
-          padding: 12,
+          padding: 10,
           displayColors: false,
           callbacks: {
             label: function(context) {
@@ -364,7 +439,8 @@ function renderChart(historyData) {
           },
           ticks: {
             color: '#64748B',
-            font: { size: 11 }
+            font: { size: 10 },
+            maxRotation: 0
           }
         },
         y: {
@@ -374,7 +450,7 @@ function renderChart(historyData) {
           },
           ticks: {
             color: '#64748B',
-            font: { size: 11 },
+            font: { size: 10 },
             callback: function(val) {
               return formatCompact(val);
             }
@@ -515,14 +591,14 @@ async function runComparison() {
 
     container.innerHTML = `
       <div class="overflow-x-auto">
-        <table class="w-full text-left text-xs border border-[#282D42] rounded overflow-hidden">
-          <thead class="bg-[#141622] text-[#9BA3B8]">
+        <table class="w-full text-left text-xs border border-[#232738] rounded-lg overflow-hidden">
+          <thead class="bg-[#10121A] text-[#9BA3B8]">
             <tr>
               <th class="p-3">Metric</th>
               ${result.comparison.map(c => `<th class="p-3 font-bold text-white">${c.domain}</th>`).join('')}
             </tr>
           </thead>
-          <tbody class="divide-y divide-[#202436]">
+          <tbody class="divide-y divide-[#1E2232]">
             <tr>
               <td class="p-3 font-medium text-[#9BA3B8]">Domain Rating (DR)</td>
               ${result.comparison.map(c => `<td class="p-3 font-extrabold text-[#00D2FF] text-sm">${c.dr}</td>`).join('')}
@@ -601,7 +677,7 @@ async function runBatchCheck() {
 
     const tbody = document.getElementById('batch-table-body');
     tbody.innerHTML = result.data.map(item => `
-      <tr class="hover:bg-[#22263A] transition-colors">
+      <tr class="hover:bg-[#1C2030] transition-colors">
         <td class="p-2.5 font-bold text-white">${item.domain}</td>
         <td class="p-2.5 text-center font-bold text-[#00D2FF]">${item.dr || '0'}</td>
         <td class="p-2.5 text-right font-bold text-white font-mono">${formatCompact(item.trafficMonthlyAvg)}</td>

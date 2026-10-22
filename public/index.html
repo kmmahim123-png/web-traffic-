@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>km.mahim | Free Website Traffic Checker & SEO Intelligence</title>
   <meta name="description" content="Check estimated website traffic, organic search keywords, Domain Rating, and competitor metrics. Created by km.mahim.">
   
   <!-- Custom Logo Favicon for km.mahim -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%2300D2FF'/><stop offset='100%25' stop-color='%233A7BD5'/></linearGradient></defs><rect width='40' height='40' rx='10' fill='%231B1E2E'/><path d='M10 28V12h4l6 8 6-8h4v16h-4V18.5L20.5 25h-1L14 18.5V28H10z' fill='url(%23g)'/></svg>">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%2300D2FF'/><stop offset='100%25' stop-color='%233A86FF'/></linearGradient></defs><rect width='40' height='40' rx='10' fill='%23151824'/><path d='M10 28V12h4l6 8 6-8h4v16h-4V18.5L20.5 25h-1L14 18.5V28H10z' fill='url(%23g)'/></svg>">
   
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -19,108 +19,108 @@
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="/styles.css">
 </head>
-<body class="bg-[#0D0E15] text-[#FFFFFF] min-h-screen flex flex-col font-sans antialiased selection:bg-[#00D2FF] selection:text-black">
+<body class="bg-[#0A0B10] text-[#FFFFFF] min-h-screen flex flex-col font-sans antialiased selection:bg-[#00D2FF] selection:text-black">
 
   <!-- Top Announcement Bar -->
-  <div class="bg-[#141622] border-b border-[#282D42] py-2 px-4 text-xs sm:text-sm text-center text-[#9BA3B8]">
+  <div class="bg-[#10121A] border-b border-[#232738] py-2 px-3 text-xs sm:text-sm text-center text-[#9BA3B8] flex items-center justify-center flex-wrap gap-1">
     <span>⚡ <strong>km.mahim Traffic Intelligence</strong>: Real-time global web index metrics & verified SERP rankings.</span>
-    <button onclick="openApiModal()" class="ml-2 text-[#00D2FF] hover:underline font-semibold inline-flex items-center gap-1">
+    <button onclick="openApiModal()" class="text-[#00D2FF] hover:underline font-semibold inline-flex items-center gap-1 ml-1">
       Settings <i data-lucide="sliders" class="w-3.5 h-3.5"></i>
     </button>
   </div>
 
   <!-- Primary Navigation Header -->
-  <header class="border-b border-[#202436] bg-[#11131E]/95 backdrop-blur sticky top-0 z-40">
+  <header class="border-b border-[#1E2232] bg-[#0E1018]/95 backdrop-blur sticky top-0 z-40">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <!-- Logo -->
       <div class="flex items-center gap-8">
-        
-        <!-- km.mahim Brand Logo -->
-        <a href="/" class="flex items-center gap-3 group">
-          <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-[#00D2FF] to-[#3A7BD5] p-[1.5px] shadow-lg shadow-[#00D2FF]/20 group-hover:scale-105 transition-transform">
-            <div class="w-full h-full bg-[#141622] rounded-[7px] flex items-center justify-center">
+        <a href="/" class="flex items-center gap-2.5 sm:gap-3 group">
+          <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-[#00D2FF] to-[#3A86FF] p-[1.5px] shadow-lg shadow-[#00D2FF]/20 group-hover:scale-105 transition-transform flex-shrink-0">
+            <div class="w-full h-full bg-[#10121A] rounded-[7px] flex items-center justify-center">
               <span class="font-black text-sm tracking-tighter text-[#00D2FF]">KM</span>
             </div>
           </div>
           <div class="flex flex-col">
-            <span class="text-lg font-black tracking-tight text-white flex items-center gap-1.5">
-              km.mahim <span class="text-[10px] uppercase font-bold tracking-widest text-[#00D2FF] bg-[#00D2FF]/10 px-2 py-0.5 rounded border border-[#00D2FF]/25">TRAFFIC</span>
+            <span class="text-base sm:text-lg font-black tracking-tight text-white flex items-center gap-1.5">
+              km.mahim <span class="text-[9px] uppercase font-bold tracking-widest text-[#00D2FF] bg-[#00D2FF]/10 px-1.5 py-0.5 rounded border border-[#00D2FF]/25">PRO</span>
             </span>
-            <span class="text-[10px] text-[#64748B] font-medium tracking-wide">SEO & Web Intelligence</span>
+            <span class="text-[10px] text-[#64748B] font-medium tracking-wide hidden sm:inline">Web Traffic & SEO Suite</span>
           </div>
         </a>
 
-        <!-- Main Navigation Links -->
+        <!-- Desktop Navigation Links -->
         <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-[#9BA3B8]">
           <a href="#" class="text-white hover:text-[#00D2FF] transition-colors flex items-center gap-1">Traffic Checker</a>
           <button onclick="openBatchModal()" class="hover:text-white transition-colors flex items-center gap-1.5">
             <i data-lucide="layers" class="w-4 h-4 text-[#00D2FF]"></i> Batch Analysis
           </button>
           <button onclick="openCompareModal()" class="hover:text-white transition-colors flex items-center gap-1.5">
-            <i data-lucide="git-compare" class="w-4 h-4 text-[#A855F7]"></i> Compare Sites
+            <i data-lucide="git-compare" class="w-4 h-4 text-[#8B5CF6]"></i> Compare Sites
           </button>
           <a href="#features" class="hover:text-white transition-colors">Features</a>
           <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
         </nav>
       </div>
 
-      <!-- Action Buttons -->
-      <div class="flex items-center gap-3">
-        <button onclick="openApiModal()" title="Engine Settings" class="p-2 text-[#9BA3B8] hover:text-white hover:bg-[#1B1E2E] rounded-lg border border-[#282D42] transition-colors">
+      <!-- Header Action Buttons (Desktop & Mobile) -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <button onclick="openApiModal()" title="Engine Settings" class="p-2.5 text-[#9BA3B8] hover:text-white hover:bg-[#151824] rounded-lg border border-[#232738] transition-colors touch-target">
           <i data-lucide="settings" class="w-4 h-4"></i>
         </button>
-        <button onclick="openBatchModal()" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold rounded-md border border-[#282D42] hover:bg-[#1B1E2E] transition-colors text-white">
+        <button onclick="openBatchModal()" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold rounded-lg border border-[#232738] hover:bg-[#151824] transition-colors text-white">
           <i data-lucide="list-plus" class="w-3.5 h-3.5"></i> Bulk Check
         </button>
-        <a href="#search-area" class="km-btn-primary px-4 py-2 text-xs sm:text-sm rounded-md font-bold transition-all shadow-md">
+        <a href="#search-area" class="km-btn-primary px-3.5 sm:px-4 py-2 text-xs sm:text-sm rounded-lg font-bold transition-all shadow-md">
           Analyze Site
         </a>
+        <!-- Mobile Hamburger Menu Button -->
+        <button onclick="toggleMobileMenu()" class="md:hidden p-2.5 text-[#9BA3B8] hover:text-white hover:bg-[#151824] rounded-lg border border-[#232738] transition-colors touch-target">
+          <i data-lucide="menu" id="hamburger-icon" class="w-5 h-5"></i>
+        </button>
       </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-[#1E2232] bg-[#0E1018] px-4 pt-3 pb-5 space-y-2">
+      <button onclick="openBatchModal(); toggleMobileMenu();" class="w-full text-left py-2.5 px-3 rounded-lg hover:bg-[#151824] text-sm font-medium text-white flex items-center gap-2">
+        <i data-lucide="layers" class="w-4 h-4 text-[#00D2FF]"></i> Batch Traffic Checker
+      </button>
+      <button onclick="openCompareModal(); toggleMobileMenu();" class="w-full text-left py-2.5 px-3 rounded-lg hover:bg-[#151824] text-sm font-medium text-white flex items-center gap-2">
+        <i data-lucide="git-compare" class="w-4 h-4 text-[#8B5CF6]"></i> Compare Competitor Sites
+      </button>
+      <a href="#features" onclick="toggleMobileMenu();" class="block py-2.5 px-3 rounded-lg hover:bg-[#151824] text-sm font-medium text-[#9BA3B8]">Features & Insights</a>
+      <a href="#faq" onclick="toggleMobileMenu();" class="block py-2.5 px-3 rounded-lg hover:bg-[#151824] text-sm font-medium text-[#9BA3B8]">Frequently Asked Questions</a>
+      <button onclick="openApiModal(); toggleMobileMenu();" class="w-full text-left py-2.5 px-3 rounded-lg hover:bg-[#151824] text-sm font-medium text-[#00D2FF] flex items-center gap-2">
+        <i data-lucide="sliders" class="w-4 h-4"></i> Engine Settings
+      </button>
     </div>
   </header>
 
   <!-- Sub-header Breadcrumb -->
-  <div class="border-b border-[#1E2234] bg-[#0E101A] py-2 px-4 sm:px-8 text-xs text-[#64748B]">
-    <div class="max-w-7xl mx-auto flex items-center gap-2">
+  <div class="border-b border-[#1A1D2C] bg-[#0A0B10] py-2 px-4 sm:px-8 text-xs text-[#64748B]">
+    <div class="max-w-7xl mx-auto flex items-center gap-1.5 sm:gap-2 overflow-x-auto whitespace-nowrap">
       <span class="hover:text-white cursor-pointer font-medium text-[#9BA3B8]">km.mahim</span>
-      <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-[#475569]"></i>
-      <span class="hover:text-white cursor-pointer text-[#9BA3B8]">SEO Tools</span>
-      <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-[#475569]"></i>
+      <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-[#475569] flex-shrink-0"></i>
+      <span class="hover:text-white cursor-pointer text-[#9BA3B8]">SEO Intelligence</span>
+      <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-[#475569] flex-shrink-0"></i>
       <span class="text-white font-semibold">Website Traffic Checker</span>
     </div>
   </div>
 
   <!-- Hero Section -->
   <main class="flex-grow">
-    <section id="search-area" class="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-      <div class="max-w-4xl mx-auto text-center mb-8">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00D2FF]/10 border border-[#00D2FF]/20 text-xs font-semibold text-[#00D2FF] mb-4">
+    <section id="search-area" class="py-8 sm:py-14 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="max-w-4xl mx-auto text-center mb-6 sm:mb-8">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#00D2FF]/10 border border-[#00D2FF]/20 text-xs font-semibold text-[#00D2FF] mb-3">
           <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Powered by km.mahim Global Index
         </div>
-        <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white mb-4">
+        <h1 class="text-2xl sm:text-5xl font-extrabold tracking-tight text-white mb-3">
           Website Traffic Checker
         </h1>
-        <p class="text-base sm:text-lg text-[#9BA3B8] max-w-2xl mx-auto">
-          Explore estimated search visits, top organic keywords, and domain rating for any website or webpage.
+        <p class="text-sm sm:text-base text-[#9BA3B8] max-w-2xl mx-auto">
+          Explore estimated monthly search visits, top organic keywords, and Domain Rating for any website or webpage.
         </p>
-
-        <!-- Tool Category Pills -->
-        <div class="flex flex-wrap items-center justify-center gap-2 mt-6">
-          <button class="km-btn-primary text-black font-bold text-xs px-3 py-1.5 rounded-full flex items-center gap-1 shadow-sm">
-            <i data-lucide="bar-chart-2" class="w-3.5 h-3.5"></i> Traffic Checker
-          </button>
-          <button onclick="fillExample('ahrefs.com');" class="bg-[#181B2A] hover:bg-[#22263A] text-[#9BA3B8] hover:text-white text-xs px-3 py-1.5 rounded-full transition-colors border border-[#282D42]">
-            ahrefs.com
-          </button>
-          <button onclick="fillExample('coca-cola.com');" class="bg-[#181B2A] hover:bg-[#22263A] text-[#9BA3B8] hover:text-white text-xs px-3 py-1.5 rounded-full transition-colors border border-[#282D42]">
-            coca-cola.com
-          </button>
-          <button onclick="fillExample('kappa.vercel.app');" class="bg-[#181B2A] hover:bg-[#22263A] text-[#9BA3B8] hover:text-white text-xs px-3 py-1.5 rounded-full transition-colors border border-[#282D42]">
-            kappa.vercel.app
-          </button>
-          <button onclick="fillExample('apple.com');" class="bg-[#181B2A] hover:bg-[#22263A] text-[#9BA3B8] hover:text-white text-xs px-3 py-1.5 rounded-full transition-colors border border-[#282D42]">
-            apple.com
-          </button>
-        </div>
       </div>
 
       <!-- Main Input Box & Controls -->
@@ -136,32 +136,32 @@
               <input 
                 type="text" 
                 id="target-input" 
-                placeholder="Enter domain or URL (e.g. ahrefs.com, kappa.vercel.app)" 
+                placeholder="Enter domain or URL (e.g. coca-cola.com, ahrefs.com)" 
                 required
                 autocomplete="off"
-                class="w-full pl-11 pr-10 py-3.5 bg-[#141622] border border-[#282D42] focus:border-[#00D2FF] focus:ring-1 focus:ring-[#00D2FF] rounded-md text-white placeholder-[#64748B] text-sm sm:text-base outline-none transition-all font-medium"
-                value="kappa.vercel.app"
+                class="w-full pl-11 pr-10 py-3.5 bg-[#10121A] border border-[#232738] focus:border-[#00D2FF] focus:ring-1 focus:ring-[#00D2FF] rounded-lg text-white placeholder-[#64748B] text-sm sm:text-base outline-none transition-all font-medium"
+                value="coca-cola.com"
               >
               <button 
                 type="button" 
                 id="clear-btn" 
                 onclick="document.getElementById('target-input').value = ''; document.getElementById('target-input').focus();"
-                class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-[#64748B] hover:text-white transition-colors"
+                class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-[#64748B] hover:text-white transition-colors touch-target"
               >
                 <i data-lucide="x" class="w-4 h-4"></i>
               </button>
 
               <!-- Suggestions Dropdown -->
-              <div id="suggestions-box" class="hidden absolute top-full left-0 right-0 mt-1 bg-[#181B2A] border border-[#282D42] rounded-md shadow-xl z-30 overflow-hidden divide-y divide-[#202436]">
+              <div id="suggestions-box" class="hidden absolute top-full left-0 right-0 mt-1.5 bg-[#151824] border border-[#232738] rounded-lg shadow-2xl z-30 overflow-hidden divide-y divide-[#1E2232]">
                 <!-- Suggestions rendered dynamically -->
               </div>
             </div>
 
             <!-- Scope Mode Selector -->
-            <div class="w-full sm:w-56 flex-shrink-0">
+            <div class="w-full sm:w-52 flex-shrink-0">
               <select 
                 id="mode-select" 
-                class="w-full py-3.5 px-3 bg-[#141622] border border-[#282D42] focus:border-[#00D2FF] rounded-md text-white text-sm outline-none cursor-pointer"
+                class="w-full py-3.5 px-3 bg-[#10121A] border border-[#232738] focus:border-[#00D2FF] rounded-lg text-white text-sm outline-none cursor-pointer"
               >
                 <option value="subdomains" selected>Subdomains (*.domain/*)</option>
                 <option value="exact">Exact URL (exact path)</option>
@@ -174,7 +174,7 @@
             <button 
               type="submit" 
               id="submit-btn" 
-              class="km-btn-primary px-6 py-3.5 rounded-md text-sm sm:text-base flex items-center justify-center gap-2 transition-all flex-shrink-0"
+              class="km-btn-primary px-6 py-3.5 rounded-lg text-sm sm:text-base flex items-center justify-center gap-2 transition-all flex-shrink-0 touch-target"
             >
               <span id="btn-text">Check traffic</span>
               <i data-lucide="arrow-right" class="w-4 h-4" id="btn-icon"></i>
@@ -183,46 +183,40 @@
           </form>
         </div>
 
-        <!-- Quick Examples & Engine Status -->
-        <div class="flex flex-wrap items-center justify-between gap-3 mt-4 text-xs text-[#9BA3B8] px-1">
-          <div class="flex flex-wrap items-center gap-1.5">
-            <span class="text-[#64748B]">Try popular sites:</span>
-            <button onclick="fillExample('coca-cola.com')" class="hover:text-white underline hover:no-underline font-mono">coca-cola.com</button>
-            <span class="text-[#475569]">·</span>
-            <button onclick="fillExample('ahrefs.com')" class="hover:text-white underline hover:no-underline font-mono">ahrefs.com</button>
-            <span class="text-[#475569]">·</span>
-            <button onclick="fillExample('semrush.com')" class="hover:text-white underline hover:no-underline font-mono">semrush.com</button>
-            <span class="text-[#475569]">·</span>
-            <button onclick="fillExample('kappa.vercel.app')" class="hover:text-white underline hover:no-underline font-mono text-[#00D2FF]">kappa.vercel.app</button>
-            <span class="text-[#475569]">·</span>
-            <button onclick="fillExample('github.com')" class="hover:text-white underline hover:no-underline font-mono">github.com</button>
-          </div>
+        <!-- Quick Examples (Horizontal Swipeable Bar on Mobile) -->
+        <div class="flex items-center gap-2 mt-4 text-xs text-[#9BA3B8] px-1 overflow-x-auto no-scrollbar scroll-smooth">
+          <span class="text-[#64748B] flex-shrink-0 flex items-center gap-1"><i data-lucide="trending-up" class="w-3.5 h-3.5 text-[#00D2FF]"></i> Popular:</span>
+          <button onclick="fillExample('coca-cola.com')" class="flex-shrink-0 px-2.5 py-1 rounded-md bg-[#151824] border border-[#232738] hover:text-[#00D2FF] transition-colors font-mono">coca-cola.com</button>
+          <button onclick="fillExample('ahrefs.com')" class="flex-shrink-0 px-2.5 py-1 rounded-md bg-[#151824] border border-[#232738] hover:text-[#00D2FF] transition-colors font-mono">ahrefs.com</button>
+          <button onclick="fillExample('semrush.com')" class="flex-shrink-0 px-2.5 py-1 rounded-md bg-[#151824] border border-[#232738] hover:text-[#00D2FF] transition-colors font-mono">semrush.com</button>
+          <button onclick="fillExample('apple.com')" class="flex-shrink-0 px-2.5 py-1 rounded-md bg-[#151824] border border-[#232738] hover:text-[#00D2FF] transition-colors font-mono">apple.com</button>
+          <button onclick="fillExample('github.com')" class="flex-shrink-0 px-2.5 py-1 rounded-md bg-[#151824] border border-[#232738] hover:text-[#00D2FF] transition-colors font-mono">github.com</button>
+          <button onclick="fillExample('kappa.vercel.app')" class="flex-shrink-0 px-2.5 py-1 rounded-md bg-[#151824] border border-[#232738] hover:text-[#00D2FF] transition-colors font-mono text-[#00D2FF]">kappa.vercel.app</button>
+        </div>
 
-          <div class="flex items-center gap-2">
-            <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-[#181B2A] border border-[#282D42] text-[#9BA3B8]">
-              <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
-              <span id="active-engine-badge">km.mahim Index</span>
-            </span>
-          </div>
+        <!-- Recent Searches Bar (Auto-populated from localStorage) -->
+        <div id="recent-searches-row" class="hidden flex items-center gap-2 mt-2 text-xs text-[#9BA3B8] px-1 overflow-x-auto no-scrollbar">
+          <span class="text-[#64748B] flex-shrink-0 flex items-center gap-1"><i data-lucide="history" class="w-3 h-3"></i> Recent:</span>
+          <div id="recent-searches-list" class="flex items-center gap-1.5 flex-nowrap"></div>
         </div>
       </div>
 
       <!-- RESULTS DASHBOARD CONTAINER -->
-      <div id="results-wrapper" class="mt-12 hidden">
+      <div id="results-wrapper" class="mt-10 sm:mt-12 hidden">
         
         <!-- Results Header Banner -->
-        <div class="card-km p-6 mb-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-l-4 border-l-[#00D2FF]">
+        <div class="card-km p-4 sm:p-6 mb-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 border-l-4 border-l-[#00D2FF]">
           <div>
             <div class="flex items-center gap-2.5 flex-wrap">
-              <h2 id="report-title" class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-                Organic traffic of kappa.vercel.app
+              <h2 id="report-title" class="text-xl sm:text-3xl font-extrabold text-white tracking-tight break-all">
+                Organic traffic of coca-cola.com
               </h2>
-              <span id="report-badge" class="bg-[#00D2FF]/15 text-[#00D2FF] border border-[#00D2FF]/30 text-xs font-semibold px-2.5 py-0.5 rounded-full">
+              <span id="report-badge" class="bg-[#00D2FF]/15 text-[#00D2FF] border border-[#00D2FF]/30 text-xs font-semibold px-2.5 py-0.5 rounded-full flex-shrink-0">
                 Subdomains
               </span>
             </div>
-            <p id="report-subtitle" class="text-xs sm:text-sm text-[#9BA3B8] mt-1 flex items-center gap-2">
-              <span id="report-source-label">Source: km.mahim Calibrated Index</span>
+            <p id="report-subtitle" class="text-xs sm:text-sm text-[#9BA3B8] mt-1.5 flex items-center gap-2 flex-wrap">
+              <span id="report-source-label" class="flex items-center gap-1"><i data-lucide="shield-check" class="w-3.5 h-3.5 text-[#00D2FF]"></i> km.mahim Global Index</span>
               <span>·</span>
               <span id="report-timestamp">Live report</span>
             </p>
@@ -230,91 +224,94 @@
 
           <!-- Quick Action Buttons -->
           <div class="flex flex-wrap items-center gap-2 w-full md:w-auto">
-            <button onclick="exportToCSV()" class="km-btn-secondary px-3 py-1.5 text-xs rounded font-medium flex items-center gap-1.5">
-              <i data-lucide="download" class="w-3.5 h-3.5"></i> Export CSV
+            <button onclick="copyReportLink()" class="km-btn-secondary px-3 py-1.5 text-xs rounded-lg font-medium flex items-center gap-1.5" title="Copy shareable link">
+              <i data-lucide="share-2" class="w-3.5 h-3.5"></i> <span class="hidden sm:inline">Share</span>
             </button>
-            <button onclick="exportToJSON()" class="km-btn-secondary px-3 py-1.5 text-xs rounded font-medium flex items-center gap-1.5">
+            <button onclick="exportToCSV()" class="km-btn-secondary px-3 py-1.5 text-xs rounded-lg font-medium flex items-center gap-1.5">
+              <i data-lucide="download" class="w-3.5 h-3.5"></i> CSV
+            </button>
+            <button onclick="exportToJSON()" class="km-btn-secondary px-3 py-1.5 text-xs rounded-lg font-medium flex items-center gap-1.5">
               <i data-lucide="file-json" class="w-3.5 h-3.5"></i> JSON
             </button>
-            <button onclick="launchCompareFromCurrent()" class="km-btn-secondary px-3 py-1.5 text-xs rounded font-medium flex items-center gap-1.5 text-[#00D2FF]">
+            <button onclick="launchCompareFromCurrent()" class="km-btn-secondary px-3 py-1.5 text-xs rounded-lg font-medium flex items-center gap-1.5 text-[#00D2FF]">
               <i data-lucide="git-compare" class="w-3.5 h-3.5"></i> Compare
             </button>
-            <button onclick="closeReport()" class="p-1.5 text-[#9BA3B8] hover:text-white rounded hover:bg-[#282D42] transition-colors ml-auto md:ml-0" title="Close report">
+            <button onclick="closeReport()" class="p-1.5 text-[#9BA3B8] hover:text-white rounded-lg hover:bg-[#232738] transition-colors ml-auto md:ml-0" title="Close report">
               <i data-lucide="x" class="w-5 h-5"></i>
             </button>
           </div>
         </div>
 
-        <!-- Unranked Notice (Shown if domain has 0 traffic) -->
-        <div id="unranked-notice" class="hidden card-km p-4 mb-6 border border-amber-500/30 bg-amber-500/10 text-amber-200 text-xs flex items-center gap-3">
-          <i data-lucide="info" class="w-5 h-5 text-amber-400 flex-shrink-0"></i>
+        <!-- Unranked Notice (Accurately shown if domain has 0 traffic) -->
+        <div id="unranked-notice" class="hidden card-km p-4 mb-6 border border-amber-500/30 bg-amber-500/10 text-amber-200 text-xs sm:text-sm flex items-start gap-3">
+          <i data-lucide="info" class="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5"></i>
           <div>
-            <strong>Notice:</strong> This specific staging app or unranked URL has no indexed organic search visitors or ranked keywords in the global web index.
+            <strong>Zero Organic Traffic Found:</strong> This URL/deployment has no indexed organic search visitors or ranked keywords in the global Google search index. In real search results, staging apps and preview subdomains report 0 visits.
           </div>
         </div>
 
-        <!-- Primary KPI Scorecards -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+        <!-- Primary KPI Scorecards (2x2 Grid on Mobile, 4-col on Desktop) -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-6">
           
           <!-- Organic Traffic Card -->
-          <div class="card-km card-km-interactive p-5">
-            <div class="flex items-center justify-between text-[#9BA3B8] mb-2 text-xs font-medium uppercase tracking-wider">
-              <span>Organic Traffic</span>
+          <div class="card-km card-km-interactive p-4 sm:p-5">
+            <div class="flex items-center justify-between text-[#9BA3B8] mb-1.5 sm:mb-2 text-[10px] sm:text-xs font-semibold uppercase tracking-wider">
+              <span>Organic Visits</span>
               <i data-lucide="trending-up" class="w-4 h-4 text-[#00D2FF]"></i>
             </div>
-            <div class="text-3xl font-black text-white" id="stat-traffic">
+            <div class="text-2xl sm:text-3xl font-black text-white" id="stat-traffic">
               0
             </div>
-            <div class="text-xs text-[#64748B] mt-2 flex items-center gap-1">
-              <span>Estimated monthly search visits</span>
+            <div class="text-[10px] sm:text-xs text-[#64748B] mt-1 sm:mt-2">
+              Monthly search visits
             </div>
           </div>
 
           <!-- Traffic Value Card -->
-          <div class="card-km card-km-interactive p-5">
-            <div class="flex items-center justify-between text-[#9BA3B8] mb-2 text-xs font-medium uppercase tracking-wider">
+          <div class="card-km card-km-interactive p-4 sm:p-5">
+            <div class="flex items-center justify-between text-[#9BA3B8] mb-1.5 sm:mb-2 text-[10px] sm:text-xs font-semibold uppercase tracking-wider">
               <span>Traffic Value</span>
               <i data-lucide="dollar-sign" class="w-4 h-4 text-emerald-400"></i>
             </div>
-            <div class="text-3xl font-black text-white" id="stat-value">
+            <div class="text-2xl sm:text-3xl font-black text-white" id="stat-value">
               $0
             </div>
-            <div class="text-xs text-[#64748B] mt-2 flex items-center gap-1">
-              <span>Estimated monthly organic PPC value</span>
+            <div class="text-[10px] sm:text-xs text-[#64748B] mt-1 sm:mt-2">
+              Monthly organic PPC value
             </div>
           </div>
 
           <!-- Domain & URL Rating Card -->
-          <div class="card-km card-km-interactive p-5 flex items-center justify-around">
+          <div class="card-km card-km-interactive p-3 sm:p-5 flex items-center justify-around">
             <div class="text-center">
-              <div class="rating-circle dr mx-auto mb-1.5" id="circle-dr" style="--score: 0;">
+              <div class="rating-circle dr mx-auto mb-1" id="circle-dr" style="--score: 0;">
                 <div class="rating-circle-inner" id="stat-dr">0</div>
               </div>
-              <span class="text-xs font-semibold text-[#9BA3B8]">Domain Rating</span>
+              <span class="text-[10px] sm:text-xs font-semibold text-[#9BA3B8]">Domain Rating</span>
             </div>
-            <div class="h-10 w-px bg-[#282D42]"></div>
+            <div class="h-8 sm:h-10 w-px bg-[#232738]"></div>
             <div class="text-center">
-              <div class="rating-circle ur mx-auto mb-1.5" id="circle-ur" style="--score: 0;">
+              <div class="rating-circle ur mx-auto mb-1" id="circle-ur" style="--score: 0;">
                 <div class="rating-circle-inner" id="stat-ur">0</div>
               </div>
-              <span class="text-xs font-semibold text-[#9BA3B8]">URL Rating</span>
+              <span class="text-[10px] sm:text-xs font-semibold text-[#9BA3B8]">URL Rating</span>
             </div>
           </div>
 
           <!-- Backlinks & Ref Domains -->
-          <div class="card-km card-km-interactive p-5">
-            <div class="flex items-center justify-between text-[#9BA3B8] mb-2 text-xs font-medium uppercase tracking-wider">
-              <span>Backlink Profile</span>
-              <i data-lucide="link-2" class="w-4 h-4 text-[#3A7BD5]"></i>
+          <div class="card-km card-km-interactive p-4 sm:p-5">
+            <div class="flex items-center justify-between text-[#9BA3B8] mb-1.5 sm:mb-2 text-[10px] sm:text-xs font-semibold uppercase tracking-wider">
+              <span>Backlinks</span>
+              <i data-lucide="link-2" class="w-4 h-4 text-[#3A86FF]"></i>
             </div>
             <div class="flex items-baseline justify-between mt-1">
               <div>
-                <div class="text-2xl font-black text-white" id="stat-backlinks">0</div>
-                <div class="text-[11px] text-[#64748B]">Total Backlinks</div>
+                <div class="text-xl sm:text-2xl font-black text-white" id="stat-backlinks">0</div>
+                <div class="text-[10px] text-[#64748B]">Total Backlinks</div>
               </div>
               <div class="text-right">
-                <div class="text-xl font-bold text-[#9BA3B8]" id="stat-refdomains">0</div>
-                <div class="text-[11px] text-[#64748B]">Ref. Domains</div>
+                <div class="text-lg sm:text-xl font-bold text-[#9BA3B8]" id="stat-refdomains">0</div>
+                <div class="text-[10px] text-[#64748B]">Ref. Domains</div>
               </div>
             </div>
           </div>
@@ -322,22 +319,22 @@
         </div>
 
         <!-- Interactive Traffic History Area Chart -->
-        <div class="card-km p-6 mb-6">
-          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-4">
+        <div class="card-km p-4 sm:p-6 mb-6">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mb-4">
             <div>
-              <h3 class="text-lg font-bold text-white flex items-center gap-2">
+              <h3 class="text-base sm:text-lg font-bold text-white flex items-center gap-2">
                 <i data-lucide="activity" class="w-4 h-4 text-[#00D2FF]"></i> Organic Traffic Trend
               </h3>
-              <p class="text-xs text-[#9BA3B8]">Monthly search visit history over time</p>
+              <p class="text-xs text-[#9BA3B8]">12-month historical search traffic progression</p>
             </div>
-            <div class="flex items-center gap-1 bg-[#141622] p-1 rounded-md border border-[#282D42] text-xs">
-              <button onclick="setChartRange(12)" class="chart-range-btn px-2.5 py-1 rounded font-medium bg-[#00D2FF] text-black">1 Year</button>
-              <button onclick="setChartRange(6)" class="chart-range-btn px-2.5 py-1 rounded font-medium text-[#9BA3B8] hover:text-white">6 Months</button>
-              <button onclick="setChartRange(0)" class="chart-range-btn px-2.5 py-1 rounded font-medium text-[#9BA3B8] hover:text-white">All Time</button>
+            <div class="flex items-center gap-1 bg-[#10121A] p-1 rounded-lg border border-[#232738] text-xs self-stretch sm:self-auto justify-center">
+              <button onclick="setChartRange(12)" class="chart-range-btn px-3 py-1 rounded-md font-medium bg-[#00D2FF] text-black">1 Year</button>
+              <button onclick="setChartRange(6)" class="chart-range-btn px-3 py-1 rounded-md font-medium text-[#9BA3B8] hover:text-white">6 Months</button>
+              <button onclick="setChartRange(0)" class="chart-range-btn px-3 py-1 rounded-md font-medium text-[#9BA3B8] hover:text-white">All Time</button>
             </div>
           </div>
 
-          <div class="h-64 sm:h-80 w-full relative">
+          <div class="h-56 sm:h-80 w-full relative">
             <canvas id="traffic-history-chart"></canvas>
           </div>
         </div>
@@ -346,24 +343,24 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
           
           <!-- Top Countries Table -->
-          <div class="card-km p-6">
+          <div class="card-km p-4 sm:p-6">
             <div class="flex items-center justify-between mb-4">
-              <h3 class="text-base font-bold text-white flex items-center gap-2">
+              <h3 class="text-sm sm:text-base font-bold text-white flex items-center gap-2">
                 <i data-lucide="globe" class="w-4 h-4 text-[#00D2FF]"></i> Top Countries
               </h3>
-              <span class="text-xs text-[#9BA3B8]">Organic Traffic Share</span>
+              <span class="text-xs text-[#9BA3B8]">Traffic Share</span>
             </div>
 
             <div class="overflow-x-auto">
-              <table class="w-full text-left text-sm" id="countries-table">
+              <table class="w-full text-left text-xs sm:text-sm" id="countries-table">
                 <thead>
-                  <tr class="text-xs text-[#64748B] border-b border-[#282D42] pb-2">
+                  <tr class="text-xs text-[#64748B] border-b border-[#232738] pb-2">
                     <th class="pb-2 font-medium">Country</th>
                     <th class="pb-2 font-medium text-right">Traffic Share</th>
                     <th class="pb-2 font-medium text-right">Est. Visits</th>
                   </tr>
                 </thead>
-                <tbody class="divide-y divide-[#202436]" id="countries-table-body">
+                <tbody class="divide-y divide-[#1E2232]" id="countries-table-body">
                   <!-- Rendered dynamically -->
                 </tbody>
               </table>
@@ -371,25 +368,25 @@
           </div>
 
           <!-- Top Organic Keywords Table -->
-          <div class="card-km p-6">
+          <div class="card-km p-4 sm:p-6">
             <div class="flex items-center justify-between mb-4">
-              <h3 class="text-base font-bold text-white flex items-center gap-2">
+              <h3 class="text-sm sm:text-base font-bold text-white flex items-center gap-2">
                 <i data-lucide="key" class="w-4 h-4 text-[#00D2FF]"></i> Top Organic Keywords
               </h3>
               <span class="text-xs text-[#9BA3B8]">Highest Traffic Terms</span>
             </div>
 
             <div class="overflow-x-auto">
-              <table class="w-full text-left text-sm" id="keywords-table">
+              <table class="w-full text-left text-xs sm:text-sm" id="keywords-table">
                 <thead>
-                  <tr class="text-xs text-[#64748B] border-b border-[#282D42] pb-2">
+                  <tr class="text-xs text-[#64748B] border-b border-[#232738] pb-2">
                     <th class="pb-2 font-medium">Keyword</th>
                     <th class="pb-2 font-medium text-center">Pos.</th>
                     <th class="pb-2 font-medium text-right">Volume</th>
                     <th class="pb-2 font-medium text-right">Traffic</th>
                   </tr>
                 </thead>
-                <tbody class="divide-y divide-[#202436]" id="keywords-table-body">
+                <tbody class="divide-y divide-[#1E2232]" id="keywords-table-body">
                   <!-- Rendered dynamically -->
                 </tbody>
               </table>
@@ -399,27 +396,27 @@
         </div>
 
         <!-- Top Pages Table -->
-        <div class="card-km p-6 mb-8">
+        <div class="card-km p-4 sm:p-6 mb-8">
           <div class="flex items-center justify-between mb-4">
             <div>
-              <h3 class="text-base font-bold text-white flex items-center gap-2">
+              <h3 class="text-sm sm:text-base font-bold text-white flex items-center gap-2">
                 <i data-lucide="file-text" class="w-4 h-4 text-[#00D2FF]"></i> Top Organic Pages
               </h3>
-              <p class="text-xs text-[#9BA3B8]">Pages driving the highest share of organic search visits</p>
+              <p class="text-xs text-[#9BA3B8] hidden sm:block">Pages driving the highest share of organic search visits</p>
             </div>
             <span class="text-xs text-[#9BA3B8]">Ranked by Volume</span>
           </div>
 
           <div class="overflow-x-auto">
-            <table class="w-full text-left text-sm" id="pages-table">
+            <table class="w-full text-left text-xs sm:text-sm" id="pages-table">
               <thead>
-                <tr class="text-xs text-[#64748B] border-b border-[#282D42] pb-2">
+                <tr class="text-xs text-[#64748B] border-b border-[#232738] pb-2">
                   <th class="pb-2 font-medium">Page URL</th>
                   <th class="pb-2 font-medium text-right">Traffic</th>
                   <th class="pb-2 font-medium text-right">Share %</th>
                 </tr>
               </thead>
-              <tbody class="divide-y divide-[#202436]" id="pages-table-body">
+              <tbody class="divide-y divide-[#1E2232]" id="pages-table-body">
                 <!-- Rendered dynamically -->
               </tbody>
             </table>
@@ -429,43 +426,43 @@
       </div>
 
       <!-- Feature Highlights Section -->
-      <section id="features" class="mt-16 pt-12 border-t border-[#202436]">
-        <div class="text-center max-w-3xl mx-auto mb-12">
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-white">
+      <section id="features" class="mt-16 pt-12 border-t border-[#1E2232]">
+        <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+          <h2 class="text-xl sm:text-3xl font-extrabold text-white">
             Uncover Any Competitor’s Search Traffic with km.mahim
           </h2>
-          <p class="text-sm sm:text-base text-[#9BA3B8] mt-2">
+          <p class="text-xs sm:text-base text-[#9BA3B8] mt-2">
             Explore organic and paid traffic metrics for any website. Use interactive graphs to see traffic progression across 170+ countries.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="card-km p-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+          <div class="card-km p-5 sm:p-6">
             <div class="w-10 h-10 rounded-lg bg-[#00D2FF]/10 border border-[#00D2FF]/20 flex items-center justify-center text-[#00D2FF] mb-4">
               <i data-lucide="search" class="w-5 h-5"></i>
             </div>
-            <h3 class="text-lg font-bold text-white mb-2">Analyze Competitors' Best Pages</h3>
-            <p class="text-sm text-[#9BA3B8]">
+            <h3 class="text-base sm:text-lg font-bold text-white mb-2">Analyze Competitors' Best Pages</h3>
+            <p class="text-xs sm:text-sm text-[#9BA3B8]">
               See which pages drive the most traffic for competitors, and understand what is working in their niche.
             </p>
           </div>
 
-          <div class="card-km p-6">
-            <div class="w-10 h-10 rounded-lg bg-[#3A7BD5]/10 border border-[#3A7BD5]/20 flex items-center justify-center text-[#3A7BD5] mb-4">
+          <div class="card-km p-5 sm:p-6">
+            <div class="w-10 h-10 rounded-lg bg-[#3A86FF]/10 border border-[#3A86FF]/20 flex items-center justify-center text-[#3A86FF] mb-4">
               <i data-lucide="compass" class="w-5 h-5"></i>
             </div>
-            <h3 class="text-lg font-bold text-white mb-2">Find High-Value Keywords</h3>
-            <p class="text-sm text-[#9BA3B8]">
+            <h3 class="text-base sm:text-lg font-bold text-white mb-2">Find High-Value Keywords</h3>
+            <p class="text-xs sm:text-sm text-[#9BA3B8]">
               Learn which search queries your competitors rank for, their positions, and how much traffic each keyword drives.
             </p>
           </div>
 
-          <div class="card-km p-6">
+          <div class="card-km p-5 sm:p-6">
             <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-4">
               <i data-lucide="layers" class="w-5 h-5"></i>
             </div>
-            <h3 class="text-lg font-bold text-white mb-2">Bulk Batch Checker</h3>
-            <p class="text-sm text-[#9BA3B8]">
+            <h3 class="text-base sm:text-lg font-bold text-white mb-2">Bulk Batch Checker</h3>
+            <p class="text-xs sm:text-sm text-[#9BA3B8]">
               Check the estimated monthly search traffic, Domain Rating, and backlink counts for multiple websites at once.
             </p>
           </div>
@@ -473,39 +470,39 @@
       </section>
 
       <!-- FAQ Section Accordion -->
-      <section id="faq" class="mt-20 max-w-4xl mx-auto">
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-white text-center mb-8">
+      <section id="faq" class="mt-16 sm:mt-20 max-w-4xl mx-auto">
+        <h2 class="text-xl sm:text-3xl font-extrabold text-white text-center mb-6 sm:mb-8">
           Frequently Asked Questions
         </h2>
 
         <div class="space-y-3" id="faq-accordion">
           
           <div class="card-km overflow-hidden">
-            <button onclick="toggleFaq(this)" class="w-full text-left p-4 sm:p-5 flex items-center justify-between font-bold text-white hover:text-[#00D2FF] transition-colors">
+            <button onclick="toggleFaq(this)" class="w-full text-left p-4 sm:p-5 flex items-center justify-between font-bold text-sm sm:text-base text-white hover:text-[#00D2FF] transition-colors">
               <span>How does km.mahim estimate website traffic?</span>
               <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-200"></i>
             </button>
-            <div class="faq-content hidden px-5 pb-5 text-sm text-[#9BA3B8] border-t border-[#282D42] pt-3">
+            <div class="faq-content hidden px-5 pb-5 text-xs sm:text-sm text-[#9BA3B8] border-t border-[#232738] pt-3">
               km.mahim models organic visits by cross-referencing global rank indexes, verified search volumes, and click-through rates (CTR) based on ranking positions in Google SERPs.
             </div>
           </div>
 
           <div class="card-km overflow-hidden">
-            <button onclick="toggleFaq(this)" class="w-full text-left p-4 sm:p-5 flex items-center justify-between font-bold text-white hover:text-[#00D2FF] transition-colors">
+            <button onclick="toggleFaq(this)" class="w-full text-left p-4 sm:p-5 flex items-center justify-between font-bold text-sm sm:text-base text-white hover:text-[#00D2FF] transition-colors">
               <span>Why do staging sites (like kappa.vercel.app) show 0 traffic?</span>
               <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-200"></i>
             </button>
-            <div class="faq-content hidden px-5 pb-5 text-sm text-[#9BA3B8] border-t border-[#282D42] pt-3">
+            <div class="faq-content hidden px-5 pb-5 text-xs sm:text-sm text-[#9BA3B8] border-t border-[#232738] pt-3">
               Because temporary deployments, dev staging subdomains, and private apps don't have indexed organic search rankings in Google. In reality, their search traffic is 0, so km.mahim accurately reports 0 visits.
             </div>
           </div>
 
           <div class="card-km overflow-hidden">
-            <button onclick="toggleFaq(this)" class="w-full text-left p-4 sm:p-5 flex items-center justify-between font-bold text-white hover:text-[#00D2FF] transition-colors">
+            <button onclick="toggleFaq(this)" class="w-full text-left p-4 sm:p-5 flex items-center justify-between font-bold text-sm sm:text-base text-white hover:text-[#00D2FF] transition-colors">
               <span>Can I check traffic for specific webpages or subdomains?</span>
               <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-200"></i>
             </button>
-            <div class="faq-content hidden px-5 pb-5 text-sm text-[#9BA3B8] border-t border-[#282D42] pt-3">
+            <div class="faq-content hidden px-5 pb-5 text-xs sm:text-sm text-[#9BA3B8] border-t border-[#232738] pt-3">
               Yes! You can choose between "Subdomains" (evaluates the root domain and all its subdomains) and "Exact URL" (evaluates the specific webpage path).
             </div>
           </div>
@@ -516,29 +513,29 @@
     </section>
   </main>
 
-  <!-- MODAL: COMPETITOR COMPARISON -->
-  <div id="compare-modal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-    <div class="card-km w-full max-w-4xl max-h-[90vh] flex flex-col shadow-2xl border border-[#00D2FF]/40">
-      <div class="p-5 border-b border-[#282D42] flex items-center justify-between">
+  <!-- MODAL: COMPETITOR COMPARISON (Mobile Optimized Drawer / Modal) -->
+  <div id="compare-modal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-end sm:items-center justify-center p-0 sm:p-4">
+    <div class="card-km w-full max-w-4xl h-[90vh] sm:h-auto sm:max-h-[90vh] flex flex-col shadow-2xl border-t sm:border border-[#00D2FF]/40 rounded-t-2xl sm:rounded-xl">
+      <div class="p-4 sm:p-5 border-b border-[#232738] flex items-center justify-between flex-shrink-0">
         <div class="flex items-center gap-2">
           <i data-lucide="git-compare" class="w-5 h-5 text-[#00D2FF]"></i>
-          <h3 class="text-lg font-bold text-white">Compare Competitor Websites</h3>
+          <h3 class="text-base sm:text-lg font-bold text-white">Compare Competitor Websites</h3>
         </div>
-        <button onclick="closeCompareModal()" class="text-[#9BA3B8] hover:text-white">
+        <button onclick="closeCompareModal()" class="text-[#9BA3B8] hover:text-white p-2">
           <i data-lucide="x" class="w-5 h-5"></i>
         </button>
       </div>
 
-      <div class="p-6 overflow-y-auto space-y-6">
+      <div class="p-4 sm:p-6 overflow-y-auto space-y-5 flex-grow">
         <p class="text-xs text-[#9BA3B8]">Compare estimated organic traffic, Domain Rating, and backlink authority between multiple competitors.</p>
         
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
-          <input type="text" id="cmp-domain-1" value="ahrefs.com" placeholder="Domain 1" class="py-2.5 px-3 bg-[#141622] border border-[#282D42] rounded text-white text-sm">
-          <input type="text" id="cmp-domain-2" value="semrush.com" placeholder="Domain 2" class="py-2.5 px-3 bg-[#141622] border border-[#282D42] rounded text-white text-sm">
-          <input type="text" id="cmp-domain-3" value="coca-cola.com" placeholder="Domain 3 (optional)" class="py-2.5 px-3 bg-[#141622] border border-[#282D42] rounded text-white text-sm">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+          <input type="text" id="cmp-domain-1" value="coca-cola.com" placeholder="Domain 1" class="py-2.5 px-3 bg-[#10121A] border border-[#232738] rounded-lg text-white text-sm">
+          <input type="text" id="cmp-domain-2" value="pepsi.com" placeholder="Domain 2" class="py-2.5 px-3 bg-[#10121A] border border-[#232738] rounded-lg text-white text-sm">
+          <input type="text" id="cmp-domain-3" value="redbull.com" placeholder="Domain 3 (optional)" class="py-2.5 px-3 bg-[#10121A] border border-[#232738] rounded-lg text-white text-sm">
         </div>
 
-        <button onclick="runComparison()" id="run-compare-btn" class="km-btn-primary px-5 py-2.5 rounded font-bold text-xs flex items-center justify-center gap-2">
+        <button onclick="runComparison()" id="run-compare-btn" class="km-btn-primary w-full sm:w-auto px-5 py-2.5 rounded-lg font-bold text-xs flex items-center justify-center gap-2 touch-target">
           <span>Compare Traffic</span>
           <i data-lucide="arrow-right" class="w-4 h-4"></i>
         </button>
@@ -550,46 +547,46 @@
     </div>
   </div>
 
-  <!-- MODAL: BATCH CHECKER -->
-  <div id="batch-modal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-    <div class="card-km w-full max-w-4xl max-h-[90vh] flex flex-col shadow-2xl border border-[#00D2FF]/40">
-      <div class="p-5 border-b border-[#282D42] flex items-center justify-between">
+  <!-- MODAL: BATCH CHECKER (Mobile Optimized) -->
+  <div id="batch-modal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-end sm:items-center justify-center p-0 sm:p-4">
+    <div class="card-km w-full max-w-4xl h-[90vh] sm:h-auto sm:max-h-[90vh] flex flex-col shadow-2xl border-t sm:border border-[#00D2FF]/40 rounded-t-2xl sm:rounded-xl">
+      <div class="p-4 sm:p-5 border-b border-[#232738] flex items-center justify-between flex-shrink-0">
         <div class="flex items-center gap-2">
           <i data-lucide="layers" class="w-5 h-5 text-[#00D2FF]"></i>
-          <h3 class="text-lg font-bold text-white">Batch Traffic Checker</h3>
+          <h3 class="text-base sm:text-lg font-bold text-white">Batch Traffic Checker</h3>
         </div>
-        <button onclick="closeBatchModal()" class="text-[#9BA3B8] hover:text-white">
+        <button onclick="closeBatchModal()" class="text-[#9BA3B8] hover:text-white p-2">
           <i data-lucide="x" class="w-5 h-5"></i>
         </button>
       </div>
 
-      <div class="p-6 overflow-y-auto space-y-4">
+      <div class="p-4 sm:p-6 overflow-y-auto space-y-4 flex-grow">
         <p class="text-xs text-[#9BA3B8]">Enter up to 25 domains (one per line) to evaluate traffic and Domain Rating in bulk.</p>
         
         <textarea 
           id="batch-domains-input" 
           rows="5" 
-          placeholder="ahrefs.com&#10;coca-cola.com&#10;kappa.vercel.app&#10;apple.com&#10;github.com"
-          class="w-full p-3 bg-[#141622] border border-[#282D42] rounded font-mono text-xs text-white placeholder-[#64748B] outline-none focus:border-[#00D2FF]"
-        >ahrefs.com
-coca-cola.com
-kappa.vercel.app
+          placeholder="coca-cola.com&#10;ahrefs.com&#10;apple.com&#10;github.com&#10;kappa.vercel.app"
+          class="w-full p-3 bg-[#10121A] border border-[#232738] rounded-lg font-mono text-xs text-white placeholder-[#64748B] outline-none focus:border-[#00D2FF]"
+        >coca-cola.com
+ahrefs.com
 apple.com
-github.com</textarea>
+github.com
+kappa.vercel.app</textarea>
 
-        <div class="flex items-center justify-between">
-          <button onclick="runBatchCheck()" id="run-batch-btn" class="km-btn-primary px-5 py-2.5 rounded font-bold text-xs flex items-center gap-2">
+        <div class="flex items-center justify-between gap-2 flex-wrap">
+          <button onclick="runBatchCheck()" id="run-batch-btn" class="km-btn-primary px-5 py-2.5 rounded-lg font-bold text-xs flex items-center gap-2 touch-target">
             <span>Run Batch Analysis</span>
             <i data-lucide="play" class="w-3.5 h-3.5"></i>
           </button>
-          <button onclick="exportBatchCSV()" id="export-batch-btn" class="km-btn-secondary px-3 py-2 rounded text-xs font-semibold hidden flex items-center gap-1.5">
+          <button onclick="exportBatchCSV()" id="export-batch-btn" class="km-btn-secondary px-3 py-2 rounded-lg text-xs font-semibold hidden flex items-center gap-1.5 touch-target">
             <i data-lucide="download" class="w-3.5 h-3.5"></i> Export CSV
           </button>
         </div>
 
         <div id="batch-results-container" class="hidden overflow-x-auto mt-4">
-          <table class="w-full text-left text-xs border border-[#282D42] rounded overflow-hidden">
-            <thead class="bg-[#141622] text-[#9BA3B8]">
+          <table class="w-full text-left text-xs border border-[#232738] rounded-lg overflow-hidden">
+            <thead class="bg-[#10121A] text-[#9BA3B8]">
               <tr>
                 <th class="p-2.5">Domain</th>
                 <th class="p-2.5 text-center">DR</th>
@@ -599,7 +596,7 @@ github.com</textarea>
                 <th class="p-2.5">Top Country</th>
               </tr>
             </thead>
-            <tbody id="batch-table-body" class="divide-y divide-[#202436]">
+            <tbody id="batch-table-body" class="divide-y divide-[#1E2232]">
               <!-- Batch rows -->
             </tbody>
           </table>
@@ -609,30 +606,30 @@ github.com</textarea>
   </div>
 
   <!-- MODAL: ENGINE CONFIGURATION -->
-  <div id="api-modal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-    <div class="card-km w-full max-w-lg shadow-2xl border border-[#282D42]">
-      <div class="p-5 border-b border-[#282D42] flex items-center justify-between">
+  <div id="api-modal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-end sm:items-center justify-center p-0 sm:p-4">
+    <div class="card-km w-full max-w-lg shadow-2xl border-t sm:border border-[#232738] rounded-t-2xl sm:rounded-xl">
+      <div class="p-4 sm:p-5 border-b border-[#232738] flex items-center justify-between">
         <div class="flex items-center gap-2">
           <i data-lucide="cpu" class="w-5 h-5 text-[#00D2FF]"></i>
-          <h3 class="text-lg font-bold text-white">km.mahim Engine Settings</h3>
+          <h3 class="text-base sm:text-lg font-bold text-white">km.mahim Engine Settings</h3>
         </div>
-        <button onclick="closeApiModal()" class="text-[#9BA3B8] hover:text-white">
+        <button onclick="closeApiModal()" class="text-[#9BA3B8] hover:text-white p-2">
           <i data-lucide="x" class="w-5 h-5"></i>
         </button>
       </div>
 
-      <div class="p-6 space-y-5 text-sm">
+      <div class="p-5 sm:p-6 space-y-4 text-sm">
         <div>
           <label class="block text-xs font-semibold text-[#9BA3B8] mb-2 uppercase tracking-wider">
             Active Provider Mode
           </label>
-          <select id="engine-provider-select" class="w-full py-2.5 px-3 bg-[#141622] border border-[#282D42] rounded text-white text-xs outline-none focus:border-[#00D2FF]">
+          <select id="engine-provider-select" class="w-full py-2.5 px-3 bg-[#10121A] border border-[#232738] rounded-lg text-white text-xs outline-none focus:border-[#00D2FF]">
             <option value="auto" selected>Auto (km.mahim Calibrated Global Index)</option>
-            <option value="ahrefs_rpc">Ahrefs v4 Reverse-Engineered RPC (/v4/stGetFreeTrafficOverview)</option>
+            <option value="ahrefs_rpc">Direct Origin RPC Gateway</option>
             <option value="ahrefs_api">Official API v3</option>
           </select>
           <p class="text-[11px] text-[#64748B] mt-1.5">
-            Auto mode delivers exact calibrated reports for global web domains.
+            Auto mode delivers instant calibrated reports for global web domains.
           </p>
         </div>
 
@@ -644,15 +641,15 @@ github.com</textarea>
             type="password" 
             id="user-api-key" 
             placeholder="Enter API Token (Optional)" 
-            class="w-full py-2.5 px-3 bg-[#141622] border border-[#282D42] rounded text-white text-xs outline-none focus:border-[#00D2FF]"
+            class="w-full py-2.5 px-3 bg-[#10121A] border border-[#232738] rounded-lg text-white text-xs outline-none focus:border-[#00D2FF]"
           >
         </div>
 
         <div class="pt-2 flex justify-end gap-2">
-          <button onclick="closeApiModal()" class="km-btn-secondary px-4 py-2 rounded text-xs font-semibold">
+          <button onclick="closeApiModal()" class="km-btn-secondary px-4 py-2 rounded-lg text-xs font-semibold">
             Cancel
           </button>
-          <button onclick="saveEngineConfig()" class="km-btn-primary px-4 py-2 rounded text-xs font-bold">
+          <button onclick="saveEngineConfig()" class="km-btn-primary px-4 py-2 rounded-lg text-xs font-bold">
             Save Settings
           </button>
         </div>
@@ -661,10 +658,10 @@ github.com</textarea>
   </div>
 
   <!-- Footer -->
-  <footer class="border-t border-[#202436] bg-[#0A0B10] py-12 px-4 sm:px-8 text-xs text-[#9BA3B8]">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+  <footer class="border-t border-[#1E2232] bg-[#07080D] py-10 px-4 sm:px-8 text-xs text-[#9BA3B8]">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
       <div class="flex items-center gap-3">
-        <div class="w-7 h-7 bg-gradient-to-br from-[#00D2FF] to-[#3A7BD5] rounded-md flex items-center justify-center font-black text-black text-xs">
+        <div class="w-7 h-7 bg-gradient-to-br from-[#00D2FF] to-[#3A86FF] rounded-lg flex items-center justify-center font-black text-black text-xs">
           KM
         </div>
         <span class="text-white font-bold text-sm">km.mahim</span>
@@ -672,7 +669,7 @@ github.com</textarea>
         <span class="text-[#64748B]">Web Traffic & SEO Intelligence</span>
       </div>
 
-      <div class="flex flex-wrap items-center gap-6 text-xs">
+      <div class="flex flex-wrap items-center justify-center gap-5 text-xs">
         <a href="#features" class="hover:text-white transition-colors">Features</a>
         <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
         <button onclick="openBatchModal()" class="hover:text-white transition-colors">Batch Tool</button>
@@ -680,7 +677,7 @@ github.com</textarea>
         <button onclick="openApiModal()" class="hover:text-white transition-colors">Settings</button>
       </div>
 
-      <div class="text-[#64748B] text-center md:text-right">
+      <div class="text-[#64748B]">
         © 2026 km.mahim. All rights reserved.
       </div>
     </div>
