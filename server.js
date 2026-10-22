@@ -31,16 +31,20 @@ app.get('/api/suggest', (req, res) => {
   res.json({ suggestions: matches.slice(0, 8) });
 });
 
-// Single Domain Traffic Check Endpoint
-app.post('/api/check-traffic', async (req, res) => {
+// Single Domain Traffic Check Endpoint (supports POST & GET)
+const handleCheckTraffic = async (req, res) => {
   try {
-    const { url, mode = 'subdomains', captchaToken = '', apiKey = '', provider = 'auto' } = req.body;
+    const rawTarget = req.body?.url || req.body?.domain || req.body?.target || req.query?.url || req.query?.domain || req.query?.target;
+    const mode = req.body?.mode || req.query?.mode || 'subdomains';
+    const captchaToken = req.body?.captchaToken || req.query?.captchaToken || '';
+    const apiKey = req.body?.apiKey || req.query?.apiKey || '';
+    const provider = req.body?.provider || req.query?.provider || 'auto';
     
-    if (!url) {
+    if (!rawTarget) {
       return res.status(400).json({ success: false, error: 'Target URL or domain is required.' });
     }
 
-    const cleanDomain = sanitizeDomain(url);
+    const cleanDomain = sanitizeDomain(rawTarget);
     if (!cleanDomain) {
       return res.status(400).json({ success: false, error: 'Invalid domain format.' });
     }
@@ -59,7 +63,7 @@ app.post('/api/check-traffic', async (req, res) => {
 
     // 2. If Reverse-Engineered RPC is explicitly requested with Turnstile Captcha
     if (captchaToken && (provider === 'ahrefs_rpc' || provider === 'auto')) {
-      const rpcResult = await queryAhrefsRpc(url, mode, captchaToken);
+      const rpcResult = await queryAhrefsRpc(rawTarget, mode, captchaToken);
       if (rpcResult.success) {
         return res.json({
           success: true,
@@ -70,7 +74,7 @@ app.post('/api/check-traffic', async (req, res) => {
     }
 
     // 3. km.mahim High-Precision Web Traffic Intelligence Engine (Default / Fallback)
-    const trafficData = await analyzeDomain(url, mode);
+    const trafficData = await analyzeDomain(rawTarget, mode);
     
     res.json({
       success: true,
@@ -81,7 +85,10 @@ app.post('/api/check-traffic', async (req, res) => {
     console.error('Error checking traffic:', err);
     res.status(500).json({ success: false, error: err.message || 'Internal server error' });
   }
-});
+};
+
+app.post('/api/check-traffic', handleCheckTraffic);
+app.get('/api/check-traffic', handleCheckTraffic);
 
 // Competitor Comparison Endpoint
 app.post('/api/compare', async (req, res) => {
