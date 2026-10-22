@@ -657,6 +657,168 @@ const BENCHMARK_DOMAINS = {
       { url: 'https://www.daraz.com.bd/', traffic: 9500000, share: 51.4 },
       { url: 'https://www.daraz.com.bd/electronic-devices/', traffic: 1850000, share: 10.0 }
     ]
+  },
+  'bkash.com': {
+    dr: 78,
+    ur: 74,
+    trafficMonthlyAvg: 12500000,
+    costMonthlyAvg: 4800000,
+    backlinks: 14500000,
+    referringDomains: 28000,
+    organicKeywords: 2400000,
+    topCountries: [
+      { country: { code: 'BD', name: 'Bangladesh' }, share: 92.4, traffic: 11550000 },
+      { country: { code: 'US', name: 'United States' }, share: 3.2, traffic: 400000 },
+      { country: { code: 'IN', name: 'India' }, share: 1.8, traffic: 225000 },
+      { country: { code: 'AE', name: 'United Arab Emirates' }, share: 1.4, traffic: 175000 },
+      { country: { code: 'GB', name: 'United Kingdom' }, share: 1.2, traffic: 150000 }
+    ],
+    topKeywords: [
+      { keyword: 'bkash', position: 1, traffic: 3800000, volume: 5100000, kd: 72, cpc: 0.18 },
+      { keyword: 'বিকাশ', position: 1, traffic: 2900000, volume: 4000000, kd: 70, cpc: 0.15 },
+      { keyword: 'bkash app', position: 1, traffic: 1400000, volume: 1900000, kd: 65, cpc: 0.22 },
+      { keyword: 'bkash offer', position: 1, traffic: 750000, volume: 1100000, kd: 58, cpc: 0.20 },
+      { keyword: 'bkash helpline', position: 1, traffic: 420000, volume: 620000, kd: 55, cpc: 0.16 }
+    ],
+    topPages: [
+      { url: 'https://www.bkash.com/', traffic: 6800000, share: 54.4 },
+      { url: 'https://www.bkash.com/app', traffic: 2400000, share: 19.2 }
+    ]
+  },
+  'pathao.com': {
+    dr: 72,
+    ur: 68,
+    trafficMonthlyAvg: 3800000,
+    costMonthlyAvg: 1400000,
+    backlinks: 5200000,
+    referringDomains: 12000,
+    organicKeywords: 850000,
+    topCountries: [
+      { country: { code: 'BD', name: 'Bangladesh' }, share: 84.5, traffic: 3211000 },
+      { country: { code: 'NP', name: 'Nepal' }, share: 8.2, traffic: 311600 },
+      { country: { code: 'US', name: 'United States' }, share: 3.5, traffic: 133000 },
+      { country: { code: 'IN', name: 'India' }, share: 2.1, traffic: 79800 },
+      { country: { code: 'GB', name: 'United Kingdom' }, share: 1.7, traffic: 64600 }
+    ],
+    topKeywords: [
+      { keyword: 'pathao', position: 1, traffic: 1450000, volume: 1900000, kd: 62, cpc: 0.25 },
+      { keyword: 'pathao ride', position: 1, traffic: 580000, volume: 820000, kd: 55, cpc: 0.28 },
+      { keyword: 'pathao food', position: 1, traffic: 420000, volume: 610000, kd: 58, cpc: 0.35 },
+      { keyword: 'pathao parcel', position: 1, traffic: 290000, volume: 410000, kd: 52, cpc: 0.22 },
+      { keyword: 'pathao courier', position: 1, traffic: 210000, volume: 320000, kd: 54, cpc: 0.30 }
+    ],
+    topPages: [
+      { url: 'https://pathao.com/', traffic: 1950000, share: 51.3 },
+      { url: 'https://pathao.com/food/', traffic: 620000, share: 16.3 }
+    ]
+  },
+  'chaldal.com': {
+    dr: 70,
+    ur: 66,
+    trafficMonthlyAvg: 2900000,
+    costMonthlyAvg: 950000,
+    backlinks: 4100000,
+    referringDomains: 9500,
+    organicKeywords: 640000,
+    topCountries: [
+      { country: { code: 'BD', name: 'Bangladesh' }, share: 94.2, traffic: 2731800 },
+      { country: { code: 'US', name: 'United States' }, share: 2.8, traffic: 81200 },
+      { country: { code: 'IN', name: 'India' }, share: 1.4, traffic: 40600 },
+      { country: { code: 'AE', name: 'United Arab Emirates' }, share: 0.9, traffic: 26100 },
+      { country: { code: 'GB', name: 'United Kingdom' }, share: 0.7, traffic: 20300 }
+    ],
+    topKeywords: [
+      { keyword: 'chaldal', position: 1, traffic: 1100000, volume: 1450000, kd: 58, cpc: 0.20 },
+      { keyword: 'chaldal online grocery', position: 1, traffic: 420000, volume: 590000, kd: 52, cpc: 0.24 },
+      { keyword: 'online grocery shopping bd', position: 1, traffic: 240000, volume: 340000, kd: 60, cpc: 0.35 },
+      { keyword: 'chaldal dhaka', position: 1, traffic: 180000, volume: 260000, kd: 48, cpc: 0.18 },
+      { keyword: 'grocery delivery dhaka', position: 1, traffic: 120000, volume: 190000, kd: 55, cpc: 0.32 }
+    ],
+    topPages: [
+      { url: 'https://chaldal.com/', traffic: 1650000, share: 56.9 },
+      { url: 'https://chaldal.com/popular', traffic: 380000, share: 13.1 }
+    ]
+  },
+  'flipkart.com': {
+    dr: 92,
+    ur: 88,
+    trafficMonthlyAvg: 320000000,
+    costMonthlyAvg: 280000000,
+    backlinks: 850000000,
+    referringDomains: 950000,
+    organicKeywords: 42000000,
+    topCountries: [
+      { country: { code: 'IN', name: 'India' }, share: 94.5, traffic: 302400000 },
+      { country: { code: 'US', name: 'United States' }, share: 2.4, traffic: 7680000 },
+      { country: { code: 'AE', name: 'United Arab Emirates' }, share: 1.2, traffic: 3840000 },
+      { country: { code: 'GB', name: 'United Kingdom' }, share: 1.0, traffic: 3200000 },
+      { country: { code: 'CA', name: 'Canada' }, share: 0.9, traffic: 2880000 }
+    ],
+    topKeywords: [
+      { keyword: 'flipkart', position: 1, traffic: 48000000, volume: 65000000, kd: 96, cpc: 0.85 },
+      { keyword: 'flipkart online shopping', position: 1, traffic: 18500000, volume: 24000000, kd: 92, cpc: 1.10 },
+      { keyword: 'flipkart grocery', position: 1, traffic: 4200000, volume: 6100000, kd: 78, cpc: 0.65 },
+      { keyword: 'big billion days', position: 1, traffic: 3800000, volume: 5500000, kd: 85, cpc: 1.40 },
+      { keyword: 'flipkart customer care', position: 1, traffic: 2900000, volume: 4200000, kd: 72, cpc: 0.45 }
+    ],
+    topPages: [
+      { url: 'https://www.flipkart.com/', traffic: 145000000, share: 45.3 },
+      { url: 'https://www.flipkart.com/mobile-phones-store', traffic: 24000000, share: 7.5 }
+    ]
+  },
+  'zomato.com': {
+    dr: 88,
+    ur: 84,
+    trafficMonthlyAvg: 85000000,
+    costMonthlyAvg: 62000000,
+    backlinks: 340000000,
+    referringDomains: 420000,
+    organicKeywords: 16000000,
+    topCountries: [
+      { country: { code: 'IN', name: 'India' }, share: 88.5, traffic: 75225000 },
+      { country: { code: 'AE', name: 'United Arab Emirates' }, share: 4.8, traffic: 4080000 },
+      { country: { code: 'US', name: 'United States' }, share: 3.2, traffic: 2720000 },
+      { country: { code: 'GB', name: 'United Kingdom' }, share: 2.1, traffic: 1785000 },
+      { country: { code: 'AU', name: 'Australia' }, share: 1.4, traffic: 1190000 }
+    ],
+    topKeywords: [
+      { keyword: 'zomato', position: 1, traffic: 18000000, volume: 24000000, kd: 92, cpc: 0.75 },
+      { keyword: 'food delivery near me', position: 1, traffic: 4800000, volume: 6800000, kd: 88, cpc: 1.20 },
+      { keyword: 'restaurants near me', position: 1, traffic: 4100000, volume: 5900000, kd: 85, cpc: 0.95 },
+      { keyword: 'zomato gold', position: 1, traffic: 1850000, volume: 2600000, kd: 72, cpc: 0.80 },
+      { keyword: 'zomato menu', position: 1, traffic: 1400000, volume: 2100000, kd: 70, cpc: 0.55 }
+    ],
+    topPages: [
+      { url: 'https://www.zomato.com/', traffic: 38000000, share: 44.7 },
+      { url: 'https://www.zomato.com/india', traffic: 12000000, share: 14.1 }
+    ]
+  },
+  'cricbuzz.com': {
+    dr: 87,
+    ur: 83,
+    trafficMonthlyAvg: 110000000,
+    costMonthlyAvg: 45000000,
+    backlinks: 180000000,
+    referringDomains: 210000,
+    organicKeywords: 14000000,
+    topCountries: [
+      { country: { code: 'IN', name: 'India' }, share: 74.5, traffic: 81950000 },
+      { country: { code: 'US', name: 'United States' }, share: 9.2, traffic: 10120000 },
+      { country: { code: 'GB', name: 'United Kingdom' }, share: 5.8, traffic: 6380000 },
+      { country: { code: 'AU', name: 'Australia' }, share: 5.4, traffic: 5940000 },
+      { country: { code: 'PK', name: 'Pakistan' }, share: 5.1, traffic: 5610000 }
+    ],
+    topKeywords: [
+      { keyword: 'cricbuzz', position: 1, traffic: 32000000, volume: 45000000, kd: 95, cpc: 0.40 },
+      { keyword: 'live cricket score', position: 1, traffic: 14500000, volume: 22000000, kd: 92, cpc: 0.55 },
+      { keyword: 'ipl live score', position: 1, traffic: 8900000, volume: 14000000, kd: 90, cpc: 0.65 },
+      { keyword: 'cricket score', position: 1, traffic: 6800000, volume: 11000000, kd: 88, cpc: 0.50 },
+      { keyword: 'cricbuzz live', position: 1, traffic: 4500000, volume: 7200000, kd: 84, cpc: 0.45 }
+    ],
+    topPages: [
+      { url: 'https://www.cricbuzz.com/', traffic: 58000000, share: 52.7 },
+      { url: 'https://www.cricbuzz.com/cricket-match/live-scores', traffic: 28000000, share: 25.5 }
+    ]
   }
 };
 
@@ -794,10 +956,78 @@ function fetchGoogleKeywords(query) {
   });
 }
 
-// Real geographic audience detection (ccTLD + GeoIP)
-async function detectDomainCountry(domain, ipAddresses = []) {
-  // 1. Check ccTLD
-  const parts = domain.toLowerCase().split('.');
+// Known South Asian & Regional Domains
+const KNOWN_REGIONAL_DOMAINS = {
+  // Bangladesh
+  'bkash.com': { code: 'BD', name: 'Bangladesh' },
+  'nagad.com': { code: 'BD', name: 'Bangladesh' },
+  'nagad.com.bd': { code: 'BD', name: 'Bangladesh' },
+  'pathao.com': { code: 'BD', name: 'Bangladesh' },
+  'chaldal.com': { code: 'BD', name: 'Bangladesh' },
+  'rokomari.com': { code: 'BD', name: 'Bangladesh' },
+  'prothomalo.com': { code: 'BD', name: 'Bangladesh' },
+  'bdjobs.com': { code: 'BD', name: 'Bangladesh' },
+  'daraz.com.bd': { code: 'BD', name: 'Bangladesh' },
+  '10minuteschool.com': { code: 'BD', name: 'Bangladesh' },
+  'bikroy.com': { code: 'BD', name: 'Bangladesh' },
+  'shikho.com': { code: 'BD', name: 'Bangladesh' },
+  'shwapno.com': { code: 'BD', name: 'Bangladesh' },
+  'aarong.com': { code: 'BD', name: 'Bangladesh' },
+  'banglanews24.com': { code: 'BD', name: 'Bangladesh' },
+  'jugantor.com': { code: 'BD', name: 'Bangladesh' },
+  'tbsnews.net': { code: 'BD', name: 'Bangladesh' },
+  'dailystar.net': { code: 'BD', name: 'Bangladesh' },
+  'dhakatribune.com': { code: 'BD', name: 'Bangladesh' },
+  'bproperty.com': { code: 'BD', name: 'Bangladesh' },
+  'startech.com.bd': { code: 'BD', name: 'Bangladesh' },
+  'ryanscomputers.com': { code: 'BD', name: 'Bangladesh' },
+  'grameenphone.com': { code: 'BD', name: 'Bangladesh' },
+  'robi.com.bd': { code: 'BD', name: 'Bangladesh' },
+  'banglalink.net': { code: 'BD', name: 'Bangladesh' },
+  'teletalk.com.bd': { code: 'BD', name: 'Bangladesh' },
+
+  // India
+  'flipkart.com': { code: 'IN', name: 'India' },
+  'zomato.com': { code: 'IN', name: 'India' },
+  'swiggy.com': { code: 'IN', name: 'India' },
+  'paytm.com': { code: 'IN', name: 'India' },
+  'hotstar.com': { code: 'IN', name: 'India' },
+  'jiocinema.com': { code: 'IN', name: 'India' },
+  'jio.com': { code: 'IN', name: 'India' },
+  'cricbuzz.com': { code: 'IN', name: 'India' },
+  'timesofindia.com': { code: 'IN', name: 'India' },
+  'ndtv.com': { code: 'IN', name: 'India' },
+  'hindustantimes.com': { code: 'IN', name: 'India' },
+  'moneycontrol.com': { code: 'IN', name: 'India' },
+  'zerodha.com': { code: 'IN', name: 'India' },
+  'groww.in': { code: 'IN', name: 'India' },
+  'nykaa.com': { code: 'IN', name: 'India' },
+  'meesho.com': { code: 'IN', name: 'India' },
+  'myntra.com': { code: 'IN', name: 'India' },
+  'irctc.co.in': { code: 'IN', name: 'India' },
+  'bookmyshow.com': { code: 'IN', name: 'India' },
+  'makemytrip.com': { code: 'IN', name: 'India' },
+  'phonepe.com': { code: 'IN', name: 'India' },
+  'ola.com': { code: 'IN', name: 'India' },
+
+  // Pakistan
+  'daraz.pk': { code: 'PK', name: 'Pakistan' },
+  'olx.com.pk': { code: 'PK', name: 'Pakistan' },
+  'pakwheels.com': { code: 'PK', name: 'Pakistan' },
+  'dawn.com': { code: 'PK', name: 'Pakistan' },
+  'geo.tv': { code: 'PK', name: 'Pakistan' }
+};
+
+// Real geographic audience detection (ccTLD + Linguistic Analysis + GeoIP)
+async function detectDomainCountry(domain, ipAddresses = [], siteMeta = {}, googleKws = []) {
+  // 1. Direct match in known regional domains dictionary
+  const clean = domain.replace(/^www\./i, '');
+  if (KNOWN_REGIONAL_DOMAINS[clean]) {
+    return KNOWN_REGIONAL_DOMAINS[clean];
+  }
+
+  // 2. Check ccTLD
+  const parts = clean.toLowerCase().split('.');
   if (parts.length >= 2) {
     const tld = parts[parts.length - 1];
     const twoPartTld = parts.length >= 3 ? `${parts[parts.length - 2]}.${tld}` : '';
@@ -810,19 +1040,59 @@ async function detectDomainCountry(domain, ipAddresses = []) {
     }
   }
 
-  // 2. Fast GeoIP check on the domain's server IP
+  // 3. Linguistic & Keyword audience signals (checks script and cultural keywords)
+  const combinedText = [
+    clean,
+    siteMeta.title || '',
+    siteMeta.desc || '',
+    siteMeta.lang || '',
+    ...(googleKws || [])
+  ].join(' ').toLowerCase();
+
+  // Bengali signals (Unicode U+0980 to U+09FF or key geo terms)
+  if (/[\u0980-\u09FF]/.test(combinedText) || /\b(bangladesh|dhaka|chittagong|sylhet|taka|bangla|bengali|bd)\b/.test(combinedText)) {
+    return { code: 'BD', name: 'Bangladesh' };
+  }
+
+  // Hindi / Indian signals (Unicode U+0900 to U+097F or key geo terms)
+  if (/[\u0900-\u097F]/.test(combinedText) || /\b(india|delhi|mumbai|bangalore|bengaluru|chennai|kolkata|hyderabad|rupee|bharat|inr)\b/.test(combinedText)) {
+    return { code: 'IN', name: 'India' };
+  }
+
+  // Pakistani signals
+  if (/\b(pakistan|karachi|lahore|islamabad|pkr)\b/.test(combinedText)) {
+    return { code: 'PK', name: 'Pakistan' };
+  }
+
+  // Arabic signals
+  if (/[\u0600-\u06FF]/.test(combinedText)) {
+    return { code: 'SA', name: 'Saudi Arabia' };
+  }
+
+  // Japanese signals
+  if (/[\u3040-\u30FF\u4E00-\u9FAF]/.test(combinedText)) {
+    return { code: 'JP', name: 'Japan' };
+  }
+
+  // 4. DNS GeoIP check on the domain's server IP
   const ip = (ipAddresses && ipAddresses.length > 0) ? ipAddresses[0] : null;
   if (ip && !ip.startsWith('127.') && !ip.startsWith('10.') && !ip.startsWith('192.168.')) {
     try {
       const geoResult = await new Promise((resolve) => {
-        const req = http.get(`http://ip-api.com/json/${ip}?fields=status,country,countryCode`, { timeout: 1500 }, (res) => {
+        const req = http.get(`http://ip-api.com/json/${ip}?fields=status,country,countryCode,as`, { timeout: 1500 }, (res) => {
           let buf = '';
           res.on('data', c => buf += c);
           res.on('end', () => {
             try {
               const j = JSON.parse(buf);
               if (j.status === 'success' && j.countryCode) {
-                resolve({ code: j.countryCode, name: j.country });
+                // If it's Cloudflare or CloudFront Anycast (AS13335, etc.), do NOT blindly trust US/CA
+                const isCdn = (j.as && (j.as.includes('Cloudflare') || j.as.includes('Amazon') || j.as.includes('Fastly')));
+                if (isCdn && (j.countryCode === 'US' || j.countryCode === 'CA')) {
+                  resolve(null);
+                } else {
+                  resolve({ code: j.countryCode, name: j.country });
+                }
               } else {
                 resolve(null);
               }
@@ -839,7 +1109,7 @@ async function detectDomainCountry(domain, ipAddresses = []) {
         return geoResult;
       }
     } catch (e) {
-      // Fallback below
+      // Fallback
     }
   }
 
@@ -858,16 +1128,20 @@ function fetchSiteMetadata(domain) {
       let html = '';
       res.on('data', chunk => {
         html += chunk;
-        if (html.length > 40000) req.destroy();
+        if (html.length > 50000) req.destroy();
       });
       res.on('end', () => {
         const titleMatch = html.match(/<title[^>]*>([^<]+)<\/title>/i);
         const title = titleMatch ? titleMatch[1].trim().replace(/\s+/g, ' ') : domain;
-        resolve({ isLive: true, title });
+        const langMatch = html.match(/<html[^>]*lang=["']([^"']+)["']/i);
+        const lang = langMatch ? langMatch[1].toLowerCase() : '';
+        const descMatch = html.match(/<meta[^>]*name=["']description["'][^>]*content=["']([^"']+)["']/i);
+        const desc = descMatch ? descMatch[1] : '';
+        resolve({ isLive: true, title, lang, desc });
       });
     });
-    req.on('error', () => resolve({ isLive: false, title: domain }));
-    req.on('timeout', () => { req.destroy(); resolve({ isLive: false, title: domain }); });
+    req.on('error', () => resolve({ isLive: false, title: domain, lang: '', desc: '' }));
+    req.on('timeout', () => { req.destroy(); resolve({ isLive: false, title: domain, lang: '', desc: '' }); });
   });
 }
 
@@ -992,10 +1266,6 @@ async function analyzeDomain(rawInput, mode = 'subdomains') {
     const backlinks = Math.round(referringDomains * (25 + (hash % 60)));
     const organicKeywords = Math.round(trafficMonthlyAvg * 0.42);
 
-    // Detect accurate primary country and build top 5 country breakdown
-    const detectedCountry = await detectDomainCountry(domain, dnsInfo.ipAddresses);
-    const topCountries = buildTopCountries(detectedCountry, trafficMonthlyAvg);
-
     // Fetch real Google Autocomplete keywords for this domain/brand
     const [rawGoogleKw1, rawGoogleKw2] = await Promise.all([
       fetchGoogleKeywords(brandName),
@@ -1003,6 +1273,10 @@ async function analyzeDomain(rawInput, mode = 'subdomains') {
     ]);
 
     const combinedKws = [...new Set([...rawGoogleKw1, ...rawGoogleKw2])].filter(k => k && k.length > 2);
+
+    // Detect accurate primary country using domain, DNS, site text, and Google search terms
+    const detectedCountry = await detectDomainCountry(domain, dnsInfo.ipAddresses, siteMeta, combinedKws);
+    const topCountries = buildTopCountries(detectedCountry, trafficMonthlyAvg);
     
     // Construct realistic keywords from live Google autocomplete
     let topKeywords = [];

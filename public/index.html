@@ -252,11 +252,11 @@
               <input 
                 type="text" 
                 id="target-input" 
-                placeholder="Enter domain or URL (e.g. coca-cola.com, ahrefs.com)" 
+                placeholder="Enter domain or URL (e.g. google.com, bkash.com, youtube.com)" 
                 required
                 autocomplete="off"
                 class="w-full pl-11 pr-10 py-3.5 bg-[#10121A] border border-[#232738] focus:border-[#00D2FF] focus:ring-1 focus:ring-[#00D2FF] rounded-lg text-white placeholder-[#64748B] text-sm sm:text-base outline-none transition-all font-medium"
-                value="coca-cola.com"
+                value=""
               >
               <button 
                 type="button" 
@@ -302,11 +302,13 @@
         <!-- Quick Examples (Horizontal Swipeable Bar on Mobile) -->
         <div class="flex items-center gap-2 mt-4 text-xs text-[#9BA3B8] px-1 overflow-x-auto no-scrollbar scroll-smooth">
           <span class="text-[#64748B] flex-shrink-0 flex items-center gap-1"><i data-lucide="trending-up" class="w-3.5 h-3.5 text-[#00D2FF]"></i> Popular:</span>
+          <button onclick="fillExample('google.com')" class="flex-shrink-0 px-2.5 py-1 rounded-md bg-[#151824] border border-[#232738] hover:text-[#00D2FF] transition-colors font-mono">google.com</button>
+          <button onclick="fillExample('bkash.com')" class="flex-shrink-0 px-2.5 py-1 rounded-md bg-[#151824] border border-[#232738] hover:text-[#00D2FF] transition-colors font-mono text-cyan-300">bkash.com</button>
+          <button onclick="fillExample('flipkart.com')" class="flex-shrink-0 px-2.5 py-1 rounded-md bg-[#151824] border border-[#232738] hover:text-[#00D2FF] transition-colors font-mono text-emerald-300">flipkart.com</button>
+          <button onclick="fillExample('youtube.com')" class="flex-shrink-0 px-2.5 py-1 rounded-md bg-[#151824] border border-[#232738] hover:text-[#00D2FF] transition-colors font-mono">youtube.com</button>
           <button onclick="fillExample('coca-cola.com')" class="flex-shrink-0 px-2.5 py-1 rounded-md bg-[#151824] border border-[#232738] hover:text-[#00D2FF] transition-colors font-mono">coca-cola.com</button>
           <button onclick="fillExample('ahrefs.com')" class="flex-shrink-0 px-2.5 py-1 rounded-md bg-[#151824] border border-[#232738] hover:text-[#00D2FF] transition-colors font-mono">ahrefs.com</button>
-          <button onclick="fillExample('semrush.com')" class="flex-shrink-0 px-2.5 py-1 rounded-md bg-[#151824] border border-[#232738] hover:text-[#00D2FF] transition-colors font-mono">semrush.com</button>
           <button onclick="fillExample('apple.com')" class="flex-shrink-0 px-2.5 py-1 rounded-md bg-[#151824] border border-[#232738] hover:text-[#00D2FF] transition-colors font-mono">apple.com</button>
-          <button onclick="fillExample('github.com')" class="flex-shrink-0 px-2.5 py-1 rounded-md bg-[#151824] border border-[#232738] hover:text-[#00D2FF] transition-colors font-mono">github.com</button>
           <button onclick="fillExample('kappa.vercel.app')" class="flex-shrink-0 px-2.5 py-1 rounded-md bg-[#151824] border border-[#232738] hover:text-[#00D2FF] transition-colors font-mono text-[#00D2FF]">kappa.vercel.app</button>
         </div>
 
@@ -314,6 +316,26 @@
         <div id="recent-searches-row" class="hidden flex items-center gap-2 mt-2 text-xs text-[#9BA3B8] px-1 overflow-x-auto no-scrollbar">
           <span class="text-[#64748B] flex-shrink-0 flex items-center gap-1"><i data-lucide="history" class="w-3 h-3"></i> Recent:</span>
           <div id="recent-searches-list" class="flex items-center gap-1.5 flex-nowrap"></div>
+        </div>
+
+        <!-- MONETIZATION / AD UNIT 1: Top Sponsored Banner (High-CTR SEO Hosting & Tools) -->
+        <div class="mt-6 mb-2 rounded-xl bg-gradient-to-r from-[#121624] via-[#10131E] to-[#141A2E] border border-[#232738] p-3 sm:p-4 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-lg">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-lg bg-[#00D2FF]/10 border border-[#00D2FF]/20 flex items-center justify-center text-[#00D2FF] flex-shrink-0">
+              <i data-lucide="zap" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="text-[9px] uppercase font-bold tracking-widest text-amber-400 bg-amber-400/10 px-1.5 py-0.5 rounded border border-amber-400/20">Sponsored</span>
+                <span class="text-xs font-bold text-white">Need Fast SEO Hosting for Your Website?</span>
+              </div>
+              <p class="text-[11px] text-[#9BA3B8] mt-0.5">Deploy high-performance websites with 99.9% uptime, free SSL, and domain.</p>
+            </div>
+          </div>
+          <a href="https://www.hostinger.com/" target="_blank" rel="noopener sponsored" class="km-btn-primary px-3.5 py-1.5 rounded-lg text-xs font-bold whitespace-nowrap flex items-center gap-1.5 flex-shrink-0">
+            <span>Claim 75% Discount</span>
+            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+          </a>
         </div>
       </div>
 
@@ -432,6 +454,26 @@
             </div>
           </div>
 
+        </div>
+
+        <!-- MONETIZATION / AD UNIT 2: Mid-Report Responsive Partner Offer -->
+        <div class="card-km p-3 sm:p-4 mb-6 bg-gradient-to-r from-[#101424] via-[#0E111D] to-[#121728] border border-[#232738] rounded-xl flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 flex-shrink-0">
+              <i data-lucide="trending-up" class="w-4 h-4"></i>
+            </div>
+            <div>
+              <div class="flex items-center gap-1.5 justify-center sm:justify-start">
+                <span class="text-[9px] uppercase font-bold tracking-widest text-[#00D2FF] bg-[#00D2FF]/10 px-1.5 py-0.5 rounded">Pro SEO Growth</span>
+                <span class="text-xs font-bold text-white">Want to Outrank Competitors on Google?</span>
+              </div>
+              <p class="text-[11px] text-[#9BA3B8] mt-0.5">Use Semrush to uncover competitor backlink gaps and profitable low-competition keywords.</p>
+            </div>
+          </div>
+          <a href="https://www.semrush.com/" target="_blank" rel="noopener sponsored" class="km-btn-secondary px-3.5 py-1.5 rounded-lg text-xs font-bold whitespace-nowrap flex items-center gap-1.5 flex-shrink-0">
+            <span>Try Semrush Free</span>
+            <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+          </a>
         </div>
 
         <!-- Interactive Traffic History Area Chart -->
@@ -773,6 +815,88 @@
             </button>
             <div class="faq-content hidden px-5 pb-5 text-xs sm:text-sm text-[#9BA3B8] border-t border-[#232738] pt-3">
               To rank on Page 1 of Google, focus on high-intent long-tail keywords with low keyword difficulty (KD), implement comprehensive Schema.org structured data, build high-authority backlinks, optimize page speed and Core Web Vitals, and submit your XML sitemap to Google Search Console for immediate indexing.
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- MONETIZATION / AFFILIATE STACK: High-Commission SEO & Hosting Tools -->
+      <section class="mt-16 sm:mt-20 pt-12 border-t border-[#1E2232] max-w-5xl mx-auto">
+        <div class="text-center mb-8">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#00D2FF] bg-[#00D2FF]/10 px-3 py-1 rounded-full border border-[#00D2FF]/20">
+            Recommended Tools
+          </span>
+          <h2 class="text-xl sm:text-2xl font-extrabold text-white mt-3">
+            Top Tools to Accelerate Your Website's Traffic & Revenue
+          </h2>
+          <p class="text-xs sm:text-sm text-[#9BA3B8] mt-1.5">
+            Partner solutions hand-picked by km.mahim for webmasters, bloggers, and SEO professionals.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+          
+          <!-- Card 1: Hostinger -->
+          <div class="card-km p-5 flex flex-col justify-between hover:border-[#00D2FF]/50 transition-all group">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-[10px] uppercase font-bold tracking-wider text-amber-400 bg-amber-400/10 px-2 py-0.5 rounded">High Performance</span>
+                <span class="text-xs font-bold text-emerald-400">Save 75%</span>
+              </div>
+              <h3 class="text-base font-bold text-white group-hover:text-[#00D2FF] transition-colors">Hostinger Web Hosting</h3>
+              <p class="text-xs text-[#9BA3B8] mt-2 leading-relaxed">
+                LiteSpeed-powered ultra-fast WordPress hosting. Guaranteed fast Core Web Vitals to rank #1 on Google with free SSL and free domain.
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t border-[#1E2232] flex items-center justify-between">
+              <span class="text-xs text-[#64748B]">From $2.99/mo</span>
+              <a href="https://www.hostinger.com/" target="_blank" rel="noopener sponsored" class="km-btn-primary px-3 py-1.5 rounded-md text-xs font-bold flex items-center gap-1">
+                <span>Claim Deal</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 2: Semrush -->
+          <div class="card-km p-5 flex flex-col justify-between hover:border-[#3A86FF]/50 transition-all group">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-[10px] uppercase font-bold tracking-wider text-[#3A86FF] bg-[#3A86FF]/10 px-2 py-0.5 rounded">#1 SEO Suite</span>
+                <span class="text-xs font-bold text-[#00D2FF]">Free Trial</span>
+              </div>
+              <h3 class="text-base font-bold text-white group-hover:text-[#3A86FF] transition-colors">Semrush Pro SEO</h3>
+              <p class="text-xs text-[#9BA3B8] mt-2 leading-relaxed">
+                The gold standard in competitor keyword analysis, backlink gap audits, and daily Google SERP rank tracking.
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t border-[#1E2232] flex items-center justify-between">
+              <span class="text-xs text-[#64748B]">Free Account</span>
+              <a href="https://www.semrush.com/" target="_blank" rel="noopener sponsored" class="km-btn-secondary px-3 py-1.5 rounded-md text-xs font-bold flex items-center gap-1">
+                <span>Start Free</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 3: Namecheap -->
+          <div class="card-km p-5 flex flex-col justify-between hover:border-purple-500/50 transition-all group">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-[10px] uppercase font-bold tracking-wider text-purple-400 bg-purple-400/10 px-2 py-0.5 rounded">Domains & DNS</span>
+                <span class="text-xs font-bold text-purple-300">Fast DNS</span>
+              </div>
+              <h3 class="text-base font-bold text-white group-hover:text-purple-400 transition-colors">Namecheap Domains</h3>
+              <p class="text-xs text-[#9BA3B8] mt-2 leading-relaxed">
+                Register cheap .com, .net, and ccTLD domains with free lifetime WHOIS privacy protection and enterprise DNS.
+              </p>
+            </div>
+            <div class="mt-5 pt-3 border-t border-[#1E2232] flex items-center justify-between">
+              <span class="text-xs text-[#64748B]">From $5.98/yr</span>
+              <a href="https://www.namecheap.com/" target="_blank" rel="noopener sponsored" class="km-btn-secondary px-3 py-1.5 rounded-md text-xs font-bold flex items-center gap-1">
+                <span>Find Domain</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </a>
             </div>
           </div>
 

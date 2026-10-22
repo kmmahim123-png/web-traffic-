@@ -65,10 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const paramDomain = urlParams.get('domain') || urlParams.get('url');
   if (paramDomain) {
     inputEl.value = paramDomain;
+    handleTrafficSubmit(new Event('submit'));
   }
-
-  // Perform initial search
-  handleTrafficSubmit(new Event('submit'));
 });
 
 // Mobile Hamburger Toggle
